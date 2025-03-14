@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>通过 docker-compose 部署 code-server</title>
+    <link href="/2025/03/14/code-server-deploy/"/>
+    <url>/2025/03/14/code-server-deploy/</url>
+    
+    <content type="html"><![CDATA[<p>code-server 是社区创作的 Web 版 VS Code，后端运行在服务器中，开发者基于浏览器运行 IDE。</p><h2 id="部署配置"><a href="#部署配置" class="headerlink" title="部署配置"></a>部署配置</h2><p>docker-compose </p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">code-server:</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">codercom/code-server:latest</span><br>    <span class="hljs-attr">container_name:</span> <span class="hljs-string">code-server</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">TZ=Asia/Shanghai</span> <span class="hljs-comment">#时区</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">PASSWORD=PASSWORD</span> <span class="hljs-comment">#可选，改成你自己的密码 PASSWORD/HASHED_PASSWORD 至少要配置一个</span><br>        <span class="hljs-comment">#- HASHED_PASSWORD= #可选，非明文保存的密码，因为上面 Password 的密码会以配置文件形式保存在服务器内，所以 code-server 提供了一个非明文形式的密码。具体可以通过 echo -n &quot;password&quot; | npx argon2-cli -e 这个命令生成，这里就不细讲了</span><br>        <span class="hljs-comment">#- SUDO_PASSWORD=password #可选，如果用这里的密码会以 sudo 的方式登陆</span><br>        <span class="hljs-comment">#- SUDO_PASSWORD_HASH= #可选，同上</span><br>        <span class="hljs-comment">#- PROXY_DOMAIN=code-server.my.domain #可选，服务器绑定的域名</span><br>        <span class="hljs-comment">#- DEFAULT_WORKSPACE=/home/coder/project #可选，默认工作区</span><br>    <span class="hljs-attr">user:</span> <span class="hljs-number">1000</span><span class="hljs-string">:1000</span><br>    <span class="hljs-attr">volumes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">./config:/config</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">./code-server:/home/coder/project</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">8080</span><span class="hljs-string">:8080</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">unless-stopped</span><br></code></pre></td></tr></table></figure><p>启动命令 <code>docker-compose up -d</code></p><h2 id="安装-python3"><a href="#安装-python3" class="headerlink" title="安装 python3"></a>安装 python3</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br><span class="hljs-built_in">sudo</span> apt install python3 python3-dev<br><br></code></pre></td></tr></table></figure><h2 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -o- https://raw.kkgithub.com/nvm-sh/nvm/v0.40.2/install.sh | bash<br><span class="hljs-built_in">source</span> ~/.bashrc<br>nvm -v<br>nvm install --lts<br></code></pre></td></tr></table></figure><h2 id="安装-extension"><a href="#安装-extension" class="headerlink" title="安装 extension"></a>安装 extension</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">code-server --install-extension ms-python.python<br>code-server --install-extension mhutchie.git-graph<br></code></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://blog.csdn.net/kirigirihitomi/article/details/132859159">通过docker-compose配置code-server</a><br>[2] <a href="https://docs.linuxserver.io/images/docker-code-server/#docker-compose-recommended-click-here-for-more-info">code-server配置参考</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>harbor安装出错</title>
+    <link href="/2025/03/13/harbor/"/>
+    <url>/2025/03/13/harbor/</url>
+    
+    <content type="html"><![CDATA[<h3 id="harbar-install"><a href="#harbar-install" class="headerlink" title="harbar install"></a>harbar install</h3><p>harboar启动失败，安装Harbor version：v2.9.0</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">popen failure: Cannot allocate memory<br>initdb: error: The program <span class="hljs-string">&quot;postgres&quot;</span> is needed by initdb but was not found <span class="hljs-keyword">in</span> the<br></code></pre></td></tr></table></figure><p>问题原因是docker版本过低，升级docker版本大于20.10.10后即可解决。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="https://github.com/goharbor/harbor/issues/19141">https://github.com/goharbor/harbor/issues/19141</a><br>[2] <a href="https://github.com/timescale/timescaledb-docker-ha/issues/260">https://github.com/timescale/timescaledb-docker-ha/issues/260</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
