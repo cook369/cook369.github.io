@@ -8,8 +8,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon-16x16.png">
-  <link rel="icon" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon-32x32.png">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="code-server 是社区创作的 Web 版 VS Code，后端运行在服务器中，开发者基于浏览器运行 IDE。 部署配置docker-compose  12345678910111213141516171819services:  code-server:    image: codercom&#x2F;code-server:latest    container_name: code-server">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-14T10:20:00.000Z">
-<meta property="article:modified_time" content="2025-03-17T05:09:54.839Z">
+<meta property="article:modified_time" content="2025-03-17T10:23:55.937Z">
 <meta property="article:author" content="likp">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -138,7 +138,7 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
+                
                 <span>首页</span>
               </a>
             </li>
@@ -150,7 +150,7 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
+                
                 <span>归档</span>
               </a>
             </li>
@@ -162,7 +162,7 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
+                
                 <span>分类</span>
               </a>
             </li>
@@ -174,7 +174,7 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
+                
                 <span>标签</span>
               </a>
             </li>
@@ -186,8 +186,20 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
+                
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                
+                <span>友链</span>
               </a>
             </li>
           
@@ -400,6 +412,38 @@
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/waline.css')
+      Fluid.utils.createScript('https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/waline.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://waline.cook369.xyz/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>
