@@ -18,11 +18,11 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/favicon-32x32.png
+favicon: /img/favicon/favicon-32x32.png
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: /img/apple-touch-icon.png
+apple_touch_icon: /img/favicon/apple-touch-icon.png
 
 # 浏览器标签页中的标题分隔符，效果：文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -503,7 +503,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/index_banner.jpg
+  banner_img: /img/banner/index.png
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -575,7 +575,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/default.png
+  banner_img: /img/banner/post.png
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -939,7 +939,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.png
+  banner_img: /img/banner/archive.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -950,7 +950,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/banner/category.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -979,7 +979,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/banner/tag.png
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -996,7 +996,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/banner/about.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/avatar.png
@@ -1018,7 +1018,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/default.png
+  banner_img: /img/banner/page.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -1043,7 +1043,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /img/banner/link.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
@@ -1079,6 +1079,24 @@ links:
       link: "https://www.zywvvd.com/",
       avatar: "https://www.zywvvd.com/image/avatar.png"
     }
+    - {
+      "title": "宇宙尽头的餐馆",
+      "intro": "自你离开，我辗转难眠",
+      "link": "https://www.flyalready.cn/",
+      "avatar": "https://www.flyalready.cn/favicon.ico"
+    }
+    - {
+      "title": "Xander Xu",
+      "intro": "在代码的星河与思维的洪流间，寻觅人工智能与人类意识共舞的奇点",
+      "link": "https://xcq.ink/",
+      "avatar": "https://xcq.ink/img/avatar.jpg"
+    }
+    - {
+      "title": "竹林里有冰",
+      "intro": "竹林里有冰",
+      "link": "https://zhul.in/",
+      "avatar": "https://static.031130.xyz/avatar.webp"
+    }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
@@ -1087,7 +1105,7 @@ links:
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
+    enable: true
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
   # 评论插件

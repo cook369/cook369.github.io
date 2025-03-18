@@ -7,6 +7,8 @@ tags:
   - secommp
   - operation not permitted
   - harbor
+categories:
+  - [docker]
 ---
 ## Harbar 安装出错
 harboar启动失败，安装Harbor version：v2.9.0
