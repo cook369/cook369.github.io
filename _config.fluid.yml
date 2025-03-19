@@ -450,8 +450,6 @@ footer:
       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
       <i class="iconfont icon-love"></i>
       <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://umaimi.is" target="_blank" rel="nofollow noopener"><span>Umami</span></a>
     </div>
 
     <div style="font-size: 0.85rem;">
@@ -863,6 +861,9 @@ waline:
   dark: 'html[data-user-color-scheme="dark"]'
   wordLimit: 0
   pageSize: 10
+  reaction: false
+  locale:
+    placeholder: '欢迎评论呀！'
 
 # 畅言 Changyan
 # 基于第三方的服务
@@ -1053,19 +1054,19 @@ links:
       title: "Fluid Blog",
       intro: "主题博客",
       link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      avatar: "/img/avatar.png"
     }
     - {
       title: "Fluid Docs",
       intro: "主题使用指南",
       link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      avatar: "/img/avatar.png"
     }
     - {
       title: "Fluid Repo",
       intro: "主题 GitHub 仓库",
       link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      avatar: "/img/avatar.png"
     }
     - {
       title: "夜法之书",
@@ -1165,7 +1166,7 @@ static_prefix:
 
   valine: https://lib.baomitu.com/valine/1.5.1/
 
-  waline: https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/
+  waline: https://registry.npmmirror.com/@waline/client/3.5.6/files/dist/
 
   gitalk: https://lib.baomitu.com/gitalk/1.8.0/
 
