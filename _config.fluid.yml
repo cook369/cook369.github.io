@@ -18,7 +18,7 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/favicon/favicon-32x32.png
+favicon: /img/favicon/favicon.png
 
 # 用于苹果设备的图标
 # Icon for Apple touch
@@ -1069,6 +1069,12 @@ links:
       avatar: "/img/avatar.png"
     }
     - {
+      "title": "bookandmusic",
+      "intro": "bookandmusic",
+      "link": "https://bookandmusic.cn/",
+      "avatar": "https://jsd.vxo.im/gh/bookandmusic/static/site/2024-11/dcb215b7f608a9dd29989286312446d4.webp"
+    }
+    - {
       title: "夜法之书",
       intro: "夜法之书",
       link: "https://blog.17lai.site/",
@@ -1098,6 +1104,12 @@ links:
       "link": "https://zhul.in/",
       "avatar": "https://static.031130.xyz/avatar.webp"
     }
+    - {
+      "title": "倾城于你",
+      "intro": "一个热爱分享的Typecho小站",
+      "link": "https://qninq.cn/",
+      "avatar": "https://qninq.cn/favicon.ico"
+    }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
@@ -1107,7 +1119,16 @@ links:
   # Custom content at the bottom of the links
   custom:
     enable: true
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
+    content: '
+      <hr>
+      <p>在下方留言申请加入我的友链，按如下格式提供信息：</p>
+      <ul>
+        <li>博客名：Luoye</li>
+        <li>简介：个人站点，分享经验</li>
+        <li>链接：https://blog.cook369.xyz</li>
+        <li>图片：https://blog.cook369.xyz//img/favicon/favicon.png</li>
+      </ul>
+      '
 
   # 评论插件
   # Comment plugin
