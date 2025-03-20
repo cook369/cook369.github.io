@@ -19,28 +19,21 @@
   <meta name="author" content="likp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍本文介绍windows下使用nvm安装nodejs nvm安装 安装nvm，使用nvm安装稳定版的nodejs进入nvm-windows发布页面，选择nvm-setup.exe安装。安装完成后在终端输入nvm version，能查到版本号说明安装成功了  常用命令 12345678# 显示已经安装的列表，list 可简化为 lsnvm list# 显示远程可安装的列表，list 也可简化为 l">
+    <meta name="description" content="安装说明 安装依赖  1apt install curl git  下载 asdf 核心 a. https:&#x2F;&#x2F;github.com&#x2F;asdf-vm&#x2F;asdf&#x2F;releases b. go install github.com&#x2F;asdf-vm&#x2F;asdf&#x2F;cmd&#x2F;asdf@v0.16.0  安装 asdf在 ~&#x2F;.bashrc 文件中加入以下内容：   12export PATH&#x3D;&amp;quo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows下nodejs安装">
-<meta property="og:url" content="https://blog.cook369.xyz/2025/03/19/nodejs-install/index.html">
+<meta property="og:title" content="asdf-usage">
+<meta property="og:url" content="https://blog.cook369.xyz/2025/03/20/asdf-usage/index.html">
 <meta property="og:site_name" content="Luoye&#39;s Blog">
-<meta property="og:description" content="介绍本文介绍windows下使用nvm安装nodejs nvm安装 安装nvm，使用nvm安装稳定版的nodejs进入nvm-windows发布页面，选择nvm-setup.exe安装。安装完成后在终端输入nvm version，能查到版本号说明安装成功了  常用命令 12345678# 显示已经安装的列表，list 可简化为 lsnvm list# 显示远程可安装的列表，list 也可简化为 l">
+<meta property="og:description" content="安装说明 安装依赖  1apt install curl git  下载 asdf 核心 a. https:&#x2F;&#x2F;github.com&#x2F;asdf-vm&#x2F;asdf&#x2F;releases b. go install github.com&#x2F;asdf-vm&#x2F;asdf&#x2F;cmd&#x2F;asdf@v0.16.0  安装 asdf在 ~&#x2F;.bashrc 文件中加入以下内容：   12export PATH&#x3D;&amp;quo">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://blog.cook369.xyz/img/nodejs-install/nvm-windows-download.png">
-<meta property="og:image" content="https://blog.cook369.xyz/img/nodejs-install/nvm-version.png">
-<meta property="og:image" content="https://blog.cook369.xyz/img/nodejs-install/nvm-settings.png">
-<meta property="og:image" content="https://blog.cook369.xyz/img/nodejs-install/node-version.png">
-<meta property="article:published_time" content="2025-03-19T22:45:56.000Z">
-<meta property="article:modified_time" content="2025-03-20T02:05:20.000Z">
+<meta property="article:published_time" content="2025-03-20T12:39:31.000Z">
+<meta property="article:modified_time" content="2025-03-20T07:42:49.000Z">
 <meta property="article:author" content="likp">
-<meta property="article:tag" content="nodejs">
-<meta property="article:tag" content="nvm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://blog.cook369.xyz/img/nodejs-install/nvm-windows-download.png">
   
   
   
-  <title>windows下nodejs安装 - Luoye&#39;s Blog</title>
+  <title>asdf-usage - Luoye&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -240,7 +233,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="windows下nodejs安装"></span>
+            <span id="subtitle" data-typed-text="asdf-usage"></span>
           
         </div>
 
@@ -251,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-19 22:45" pubdate>
-          2025年3月19日 晚上
+        <time datetime="2025-03-20 12:39" pubdate>
+          2025年3月20日 下午
         </time>
       </span>
     
@@ -263,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          268 字
+          189 字
         
       </span>
     
@@ -274,7 +267,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -319,46 +312,44 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">windows下nodejs安装</h1>
+            <h1 id="seo-header">asdf-usage</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文介绍windows下使用nvm安装nodejs</p>
-<h2 id="nvm安装"><a href="#nvm安装" class="headerlink" title="nvm安装"></a>nvm安装</h2><ol>
-<li>安装nvm，使用nvm安装稳定版的nodejs<br>进入<a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">nvm-windows发布页面</a>，选择nvm-setup.exe安装。<br><img src="/img/nodejs-install/nvm-windows-download.png" srcset="/img/loading.gif" lazyload><br>安装完成后在终端输入nvm version，能查到版本号说明安装成功了<br><img src="/img/nodejs-install/nvm-version.png" srcset="/img/loading.gif" lazyload></li>
+                <h2 id="安装说明"><a href="#安装说明" class="headerlink" title="安装说明"></a>安装说明</h2><ol>
+<li>安装依赖</li>
 </ol>
-<p>常用命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">显示已经安装的列表，list 可简化为 <span class="hljs-built_in">ls</span></span><br>nvm list<br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示远程可安装的列表，list 也可简化为 <span class="hljs-built_in">ls</span></span><br>nvm list available<br><span class="hljs-meta prompt_"># </span><span class="language-bash">卸载指定版本 node</span><br>nvm uninstall [version]<br><span class="hljs-meta prompt_"># </span><span class="language-bash">使用指定版本 node</span><br>nvm use [version]<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt install curl git<br></code></pre></td></tr></table></figure>
 <ol start="2">
-<li>配置nvm下载镜像<br>在 nvm 的安装路径下，找到 settings.txt，在后面加上这两行，设置国内淘宝镜像源：</li>
+<li><p>下载 asdf 核心<br> a. <a target="_blank" rel="noopener" href="https://github.com/asdf-vm/asdf/releases">https://github.com/asdf-vm/asdf/releases</a><br> b. <code>go install github.com/asdf-vm/asdf/cmd/asdf@v0.16.0</code></p>
+</li>
+<li><p>安装 asdf<br>在 ~&#x2F;.bashrc 文件中加入以下内容：</p>
+</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">node_mirror: https://npmmirror.com/mirrors/node/<br>npm_mirror: https://npmmirror.com/mirrors/npm/<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;<span class="hljs-variable">$&#123;ASDF_DATA_DIR:-<span class="hljs-variable">$HOME</span>/.asdf&#125;</span>/shims:<span class="hljs-variable">$PATH</span>&quot;</span><br>. &lt;(asdf completion bash)<br></code></pre></td></tr></table></figure>
 
-<p>命令行版</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">阿里云云镜像</span><br>nvm npm_mirror https://npmmirror.com/mirrors/npm/<br>nvm node_mirror https://npmmirror.com/mirrors/node/<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">腾讯云镜像</span><br>nvm npm_mirror http://mirrors.cloud.tencent.com/npm/<br>nvm node_mirror http://mirrors.cloud.tencent.com/nodejs-release/<br></code></pre></td></tr></table></figure>
-
-<p><img src="/img/nodejs-install/nvm-settings.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="nodejs安装"><a href="#nodejs安装" class="headerlink" title="nodejs安装"></a>nodejs安装</h2><ol start="3">
-<li>nodejs安装<br>使用<code>nvm install xxx</code>安装lts版本的noejs</li>
-</ol>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> install <span class="hljs-number">22</span><br><span class="hljs-attribute">nvm</span> list<br><span class="hljs-attribute">nvm</span> use <span class="hljs-number">22</span><br></code></pre></td></tr></table></figure>
-<p><img src="/img/nodejs-install/node-version.png" srcset="/img/loading.gif" lazyload></p>
 <ol start="4">
-<li>修改 npm 默认镜像源</li>
+<li>为每一个你想要管理的工具&#x2F;运行环境安装插件</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm config set registry http://registry.npmmirror.com<br><span class="hljs-meta prompt_"># </span><span class="language-bash">检查</span><br>npm config get registry<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt-get install dirmngr gpg curl gawk<br>asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git<br><br></code></pre></td></tr></table></figure>
 
 <ol start="5">
-<li>其他</li>
+<li>安装工具&#x2F;运行环境的一个版本</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">npm config <span class="hljs-built_in">set</span> cache <span class="hljs-string">&quot;%NVM_SYMLINK%\node_cache&quot;</span></span><br>npm config set cache &quot;D:\nvm\nodejs\node_cache&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">npm config <span class="hljs-built_in">set</span> prefix <span class="hljs-string">&quot;%NVM_SYMLINK%\node_global&quot;</span></span><br>npm config set prefix &quot;D:\nvm\nodejs\node_global&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">可编辑 .npmrc 配置文件</span><br>npm config edit<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看部分 .npmrc 配置信息</span><br>npm config ls<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">asdf install nodejs latest<br></code></pre></td></tr></table></figure>
 
+<ol start="6">
+<li>通过 .tool-versions 配置文件设置全局和项目版本</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">asdf <span class="hljs-built_in">set</span> nodejs latest<br></code></pre></td></tr></table></figure>
 
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># asdf plugin add &lt;tool&gt; &lt;git url&gt;</span><br><br>asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git<br>asdf plugin add python https://github.com/asdf-community/asdf-python.git<br>asdf plugin add java https://github.com/asdf-community/asdf-java.git<br>asdf plugin add golang https://github.com/asdf-community/asdf-golang.git<br>asdf plugin add poetry https://github.com/asdf-community/asdf-poetry.git<br><br><span class="hljs-comment"># asdf list all &lt;tool&gt;</span><br>asdf list all nodejs<br><br><span class="hljs-comment"># asdf install &lt;tool&gt; latest</span><br>asdf install nodejs latest<br><br></code></pre></td></tr></table></figure>
 
-
-
-
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/asdf-vm/asdf">https://github.com/asdf-vm/asdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://asdf-vm.com/guide/getting-started.html">https://asdf-vm.com/guide/getting-started.html</a></li>
+</ol>
 
                 
               </div>
@@ -367,46 +358,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/nodejs/" class="category-chain-item">nodejs</a>
-  
-  
-
-      </span>
-    
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/nvm/" class="category-chain-item">nvm</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/nodejs/" class="print-no-link">#nodejs</a>
-      
-        <a href="/tags/nvm/" class="print-no-link">#nvm</a>
-      
-    </div>
   
 </div>
 
@@ -416,8 +367,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>windows下nodejs安装</div>
-      <div>https://blog.cook369.xyz/2025/03/19/nodejs-install/</div>
+      <div>asdf-usage</div>
+      <div>https://blog.cook369.xyz/2025/03/20/asdf-usage/</div>
     </div>
     <div class="license-meta">
       
@@ -429,7 +380,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月19日</div>
+          <div>2025年3月20日</div>
         </div>
       
       
@@ -466,18 +417,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/20/asdf-usage/" title="asdf-usage">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">asdf-usage</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/14/code-server-deploy/" title="通过 docker-compose 部署 code-server">
-                        <span class="hidden-mobile">通过 docker-compose 部署 code-server</span>
+                      <a href="/2025/03/19/nodejs-install/" title="windows下nodejs安装">
+                        <span class="hidden-mobile">windows下nodejs安装</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
