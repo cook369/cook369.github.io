@@ -9,6 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - uses: actions/setup-node@v4
       with:
@@ -21,8 +23,9 @@ jobs:
         npm install
         npm install -g hexo-cli
 
-    # - name: Create CNAME file
-    #   run: echo "www.297729.xyz" > source/CNAME  # 确保CNAME文件在正确的位置
+    - name: Fix file upate data
+      run: |
+        git ls-files -z | while read -d '' path; do touch -d $(git log -1 --format="@%ct" "$path") "$path" && echo "Fixed: $path"; done
 
     - name: Build Hexo
       run: hexo generate  # 生成站点
