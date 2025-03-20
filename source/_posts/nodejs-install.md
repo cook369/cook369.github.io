@@ -14,7 +14,7 @@ categories:
 ## nvm安装
 1. 安装nvm，使用nvm安装稳定版的nodejs
 进入[nvm-windows发布页面](https://github.com/coreybutler/nvm-windows/releases)，选择nvm-setup.exe安装。
-![](img/nodejs-install/nvm-windows-下载.png)
+![](img/nodejs-install/nvm-windows-download.png)
 安装完成后在终端输入nvm version，能查到版本号说明安装成功了
 ![](img/nodejs-install/nvm-version.png)
 
