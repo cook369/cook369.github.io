@@ -2,9 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.cook369.xyz/2025/03/21/ansible-usage/</loc>
+    
+    <lastmod>2025-03-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.cook369.xyz/2025/03/14/code-server-deploy/</loc>
+    
+    <lastmod>2025-03-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.cook369.xyz/2025/03/13/harbor/</loc>
+    
+    <lastmod>2025-03-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.cook369.xyz/2025/03/20/asdf-usage/</loc>
     
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,25 +47,7 @@
   </url>
   
   <url>
-    <loc>https://blog.cook369.xyz/2025/03/13/harbor/</loc>
-    
-    <lastmod>2025-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.cook369.xyz/2025/03/14/code-server-deploy/</loc>
-    
-    <lastmod>2025-03-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.cook369.xyz/about/index.html</loc>
+    <loc>https://blog.cook369.xyz/categories/index.html</loc>
     
     <lastmod>2025-03-13</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://blog.cook369.xyz/categories/index.html</loc>
+    <loc>https://blog.cook369.xyz/about/index.html</loc>
     
     <lastmod>2025-03-13</lastmod>
     
@@ -67,43 +76,64 @@
 
   <url>
     <loc>https://blog.cook369.xyz/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://blog.cook369.xyz/tags/ansible/</loc>
+    <lastmod>2025-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.cook369.xyz/tags/code-server/</loc>
+    <lastmod>2025-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.cook369.xyz/tags/docker/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/secommp/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/harbor/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/nodejs/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/nvm/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.cook369.xyz/tags/asdf/</loc>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -112,21 +142,21 @@
   
   <url>
     <loc>https://blog.cook369.xyz/categories/docker/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/categories/nodejs/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/categories/nvm/</loc>
-    <lastmod>2025-03-20</lastmod>
+    <lastmod>2025-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

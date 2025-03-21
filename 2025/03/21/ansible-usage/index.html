@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="likp">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="ansible安装 使用pip安装ansible  12python get-pip.py --userpython -m pip install --user ansible  检查ansible安装  1ansible --version inventoryansible默认使用&#x2F;etc&#x2F;ansible&#x2F;hosts作为inventory文件，也可以使用-i选项指定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ansible使用说明">
+<meta property="og:url" content="https://blog.cook369.xyz/2025/03/21/ansible-usage/index.html">
+<meta property="og:site_name" content="Luoye&#39;s Blog">
+<meta property="og:description" content="ansible安装 使用pip安装ansible  12python get-pip.py --userpython -m pip install --user ansible  检查ansible安装  1ansible --version inventoryansible默认使用&#x2F;etc&#x2F;ansible&#x2F;hosts作为inventory文件，也可以使用-i选项指定">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-21T10:14:09.000Z">
+<meta property="article:modified_time" content="2025-03-21T03:14:53.000Z">
+<meta property="article:author" content="likp">
+<meta property="article:tag" content="ansible">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>ansible使用说明 - Luoye&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.cook369.xyz","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":"https://umami.cook369.xyz/script.js","website_id":"bb68ba03-7848-4285-86e0-f242fa750d5b","domains":null,"start_time":"2025-03-10T00:00:00.000Z","token":"z/Ig5sCcnr2UpI9k3wowJ4/W+LGfrmynLRTcW//414/tojAYnfAyI+i9vku1HLG4zNIdnRK16GT0XtCyHIfDXdwKxvsSvTWxoWtkatk78J7wPJBwzakTw9g6DaHOHaKWVwutWa3uMCSpkypUc6Jb316XQ8D+4XSSS8vF3nb/FHnrKxgtgBY2YANsL87m43pCfbg7W/TcE29CrI4mT6KXt8NPxNYlJSMEbM4W9iXryS3BJ8kCw1uiF58YGYHeFp06/npuHdGp9UyVZpHpoyeznRbkp/XWzpxjRmHkiBdSXoCO+QFYNJtKyyM1CG/sNEgnzXEFurrd2z0m3itrWF+fHiWVVabfKHDB2706sZcw/9RGwXYnLaM7DHhnT413g2K2U67h","api_server":"https://umami.cook369.xyz"}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        let umami = document.createElement('script');
+        umami.async = true;
+        umami.src = "https://umami.cook369.xyz/script.js";
+        umami.setAttribute("data-website-id", "bb68ba03-7848-4285-86e0-f242fa750d5b");
+        umami.setAttribute("data-domains", "");
+        document.head.appendChild(umami);
+      }
+    </script>
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Luoye</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner/post.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ansible使用说明"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-21 10:14" pubdate>
+          2025年3月21日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          682 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="umami-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="umami-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">ansible使用说明</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="ansible安装"><a href="#ansible安装" class="headerlink" title="ansible安装"></a>ansible安装</h1><ol>
+<li>使用pip安装ansible</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">python get-pip.py --user<br>python -m pip install --user ansible<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>检查ansible安装</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ansible --version<br></code></pre></td></tr></table></figure>
+<h1 id="inventory"><a href="#inventory" class="headerlink" title="inventory"></a>inventory</h1><p>ansible默认使用&#x2F;etc&#x2F;ansible&#x2F;hosts作为inventory文件，也可以使用-i选项指定inventory文件<br>inventory文件格式：<br>ini格式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs shell">[webservers]<br>webserver1.example.com<br>webserver2.example.com<br>webserver3.example.com<br>192.0.6.45<br><br>[databases]<br>database1.example.com<br>database2.example.com<br><br>[host]<br>host1 ansible_host=127.0.0.1 ansible_user=vagrant ansible_port=2222 ansible_ssh_private_key_file=./.vagrant/machines/host1/virtualbox/private_key<br><br>[remote]<br>remote_test<br><br>[remote:vars]<br>ansible_host=IP_ADDRESS_OF_VIRTUAL_MACHINE<br>ansible_user=USERNAME<br></code></pre></td></tr></table></figure>
+
+<h1 id="playbook"><a href="#playbook" class="headerlink" title="playbook"></a>playbook</h1><p>playbook格式：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Intro</span> <span class="hljs-string">to</span> <span class="hljs-string">Ansible</span> <span class="hljs-string">Playbooks</span><br>  <span class="hljs-attr">hosts:</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">tasks:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Copy</span> <span class="hljs-string">file</span> <span class="hljs-string">hosts</span> <span class="hljs-string">with</span> <span class="hljs-string">permissions</span><br>    <span class="hljs-attr">ansible.builtin.copy:</span><br>      <span class="hljs-attr">src:</span> <span class="hljs-string">./hosts</span><br>      <span class="hljs-attr">dest:</span> <span class="hljs-string">/tmp/hosts_backup</span><br>      <span class="hljs-attr">mode:</span> <span class="hljs-number">0644</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Add</span> <span class="hljs-string">the</span> <span class="hljs-string">user</span> <span class="hljs-string">test</span><br>    <span class="hljs-attr">ansible.builtin.user:</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">test</span><br>    <span class="hljs-attr">become:</span> <span class="hljs-literal">yes</span><br>    <span class="hljs-attr">become_method:</span> <span class="hljs-string">sudo</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Upgrade</span> <span class="hljs-string">all</span> <span class="hljs-string">apt</span> <span class="hljs-string">packages</span><br>    <span class="hljs-attr">apt:</span><br>      <span class="hljs-attr">force_apt_get:</span> <span class="hljs-literal">yes</span><br>      <span class="hljs-attr">upgrade:</span> <span class="hljs-string">dist</span><br>    <span class="hljs-attr">become:</span> <span class="hljs-literal">yes</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="Ansible-常用命令"><a href="#Ansible-常用命令" class="headerlink" title="Ansible 常用命令"></a>Ansible 常用命令</h1><p>命令行执行，格式为<code>ansible [host-pattern] -m [module] -a &quot;[module options]&quot;</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs shell">ansible all -i localhost, --connection=local -m ping<br>ansible all -i hosts -m ping<br><br>ansible all -i hosts --limit host2 -a &quot;/bin/echo hello&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">指定ansible_user和ansible_password,执行模块</span><br>ansible all -i &#x27;127.0.0.1,&#x27; -m ping  --e &quot;ansible_user=xxx ansible_password=xxx&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">-K交互输入密码</span><br>ansible all -i &#x27;127.0.0.1,&#x27; -a &quot;hostname&quot;  -u xxx -b -K<br><span class="hljs-meta prompt_"># </span><span class="language-bash">获取os的运行时间</span><br>ansible all -i /path/to/inventory/file -m command -a uptime <br><span class="hljs-meta prompt_"># </span><span class="language-bash">远程创建文件</span><br>ansible all -m ansible.builtin.file -a &quot;dest=/srv/foo/b.txt mode=600 owner=xxx group=xxx&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">远程创建目录</span><br>ansible all -m ansible.builtin.file -a &quot;dest=/path/to/c mode=755 owner=xxx group=xxx state=directory&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">远程删除文件</span><br>ansible webservers -m ansible.builtin.file -a &quot;dest=/path/to/c state=absent&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">指定任务开始执行</span><br>ansible-playbook playbook.yml --start-at-task=&quot;install packages&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">逐行执行</span><br>ansible-playbook playbook.yml --step<br><br></code></pre></td></tr></table></figure>
+
+<h1 id="Ansible-环境变量常用"><a href="#Ansible-环境变量常用" class="headerlink" title="Ansible 环境变量常用"></a>Ansible 环境变量常用</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">hostkey 检查</span><br>export ANSIBLE_HOST_KEY_CHECKING=False<br><span class="hljs-meta prompt_"># </span><span class="language-bash">全局启用调试器</span><br>export ANSIBLE_ENABLE_TASK_DEBUGGER=True<br></code></pre></td></tr></table></figure>
+
+<h1 id="Ansible-默认路径"><a href="#Ansible-默认路径" class="headerlink" title="Ansible 默认路径"></a>Ansible 默认路径</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">inventory</span><br>/etc/ansible/hosts<br></code></pre></td></tr></table></figure>
+
+<h1 id="Ansible-debug"><a href="#Ansible-debug" class="headerlink" title="Ansible debug"></a>Ansible debug</h1><ol>
+<li>–step 任务执行交互</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">PLAY [Your play name] <span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span><br>Perform task: TASK: Your task name (N)o/(y)es/(c)ontinue:<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>-vvv 显示详细日志<br><code>ansible-playbook playbook.yml -vvv</code></li>
+<li>打印运行时的变量信息</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">dump</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">hosts:</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Print</span> <span class="hljs-string">some</span> <span class="hljs-string">debug</span> <span class="hljs-string">information</span><br>      <span class="hljs-attr">vars:</span><br>        <span class="hljs-attr">msg:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          Module Variables (&quot;vars&quot;):</span><br><span class="hljs-string">          --------------------------------</span><br><span class="hljs-string">          &#123;&#123; vars | to_nice_json &#125;&#125;</span><br><span class="hljs-string">          ================================</span><br><span class="hljs-string"></span><br>          <span class="hljs-string">Environment</span> <span class="hljs-string">Variables</span> <span class="hljs-string">(&quot;environment&quot;):</span><br>          <span class="hljs-string">--------------------------------</span><br>          &#123;&#123; <span class="hljs-string">environment</span> <span class="hljs-string">|</span> <span class="hljs-string">to_nice_json</span> &#125;&#125;<br>          <span class="hljs-string">================================</span><br><br>          <span class="hljs-string">Group</span> <span class="hljs-string">Variables</span> <span class="hljs-string">(&quot;groups&quot;):</span><br>          <span class="hljs-string">--------------------------------</span><br>          &#123;&#123; <span class="hljs-string">groups</span> <span class="hljs-string">|</span> <span class="hljs-string">to_nice_json</span> &#125;&#125;<br>          <span class="hljs-string">================================</span><br><br>          <span class="hljs-string">Host</span> <span class="hljs-string">Variables</span> <span class="hljs-string">(&quot;hostvars&quot;):</span><br>          <span class="hljs-string">--------------------------------</span><br>          &#123;&#123; <span class="hljs-string">hostvars</span> <span class="hljs-string">|</span> <span class="hljs-string">to_nice_json</span> &#125;&#125;<br>          <span class="hljs-string">================================</span><br>      <span class="hljs-attr">debug:</span><br>        <span class="hljs-attr">msg:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">&#123;&#123; msg.split(&#x27;\n&#x27;) &#125;&#125;</span>&quot;</span><br>      <span class="hljs-attr">tags:</span> <span class="hljs-string">debug_info</span><br></code></pre></td></tr></table></figure>
+<ol start="4">
+<li>ansible-lint 检查playbook</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">roles/rolename/tasks/main.yml:8: risky-file-permissions File permissions unset or incorrect<br></code></pre></td></tr></table></figure>
+<ol start="5">
+<li><p>ansible-console 交互模式运行<br>运行命令<code>ansible-console -i hosts.yml</code>.<br>获取提示信息<code>help</code>, 获取模块说明<code>help shell</code>。<br>执行模块<code>shell touch /tmp/asd creates=/tmp/asd</code>.<br>切换运行主机<code>cd group</code>, 查看主机<code>command hostname</code>.<br>模块不存在，默认会使用ansible.builtin.shell模块，<code>echo blah</code>会用shell执行.<br>语法提示<code>&lt;tab&gt;</code>.</p>
+</li>
+<li><p>Ansible Debugger<br>任务失败时候进入python交互模式，可以执行命令。</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Execute</span> <span class="hljs-string">a</span> <span class="hljs-string">command</span><br>  <span class="hljs-attr">ansible.builtin.command:</span> <span class="hljs-string">&quot;false&quot;</span><br>  <span class="hljs-attr">debugger:</span> <span class="hljs-string">on_failed</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">My</span> <span class="hljs-string">play</span><br>  <span class="hljs-attr">hosts:</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">debugger:</span> <span class="hljs-string">on_skipped</span><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Execute</span> <span class="hljs-string">a</span> <span class="hljs-string">command</span><br>      <span class="hljs-attr">ansible.builtin.command:</span> <span class="hljs-string">&quot;true&quot;</span><br>      <span class="hljs-attr">when:</span> <span class="hljs-literal">False</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">debugger:</span> <span class="hljs-string">on_failed</span><br>  <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">no</span><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">fail:</span><br></code></pre></td></tr></table></figure>
+<p>debug中使用的命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>缩写</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>print</td>
+<td>p</td>
+<td>打印变量</td>
+</tr>
+<tr>
+<td>task.args[key] &#x3D; value</td>
+<td></td>
+<td>更新args</td>
+</tr>
+<tr>
+<td>task_vars[key] &#x3D; value</td>
+<td></td>
+<td>更新task_vars，需要跟update_task一起用</td>
+</tr>
+<tr>
+<td>update_task</td>
+<td>u</td>
+<td>重新创建任务</td>
+</tr>
+<tr>
+<td>redo</td>
+<td>r</td>
+<td>重试任务</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>c</td>
+<td>继续执行</td>
+</tr>
+<tr>
+<td>quit</td>
+<td>q</td>
+<td>退出debugger</td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell">p task<br>p task.args<br>p task_vars<br>p task_vars[&#x27;pkg_name&#x27;]<br>p host<br>p result._result<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">更新args</span><br>task.args[&#x27;name&#x27;] = &#x27;bash&#x27;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">更新vars,需要和update_task一起用</span><br>task_vars[&#x27;pkg_name&#x27;] = &#x27;bash<br>update_task<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">重试任务</span><br>redo <br><br><br></code></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>常用debug写法</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Print</span> <span class="hljs-string">a</span> <span class="hljs-string">message</span><br>  <span class="hljs-attr">debug:</span><br>    <span class="hljs-attr">msg:</span> <span class="hljs-string">&quot;Hello, Ansible&quot;</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Check</span> <span class="hljs-string">variable</span> <span class="hljs-string">value</span><br>  <span class="hljs-attr">debug:</span><br>    <span class="hljs-attr">var:</span> <span class="hljs-string">some_variable</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Debugging</span> <span class="hljs-string">Variables</span><br>  <span class="hljs-attr">hosts:</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Display</span> <span class="hljs-string">the</span> <span class="hljs-string">value</span> <span class="hljs-string">of</span> <span class="hljs-string">&#x27;my_variable&#x27;</span><br>      <span class="hljs-attr">debug:</span><br>        <span class="hljs-attr">msg:</span> <span class="hljs-string">&quot;The value of my_variable is <span class="hljs-template-variable">&#123;&#123; my_variable &#125;&#125;</span>&quot;</span><br><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://docs.ansible.com/ansible/latest/index.html">Ansible官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/@vinoji2005/day-20-debugging-ansible-playbooks-essential-techniques-35d1576847ffl">Debugging Ansible Playbooks</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_debugger.html">Ansible Debugger</a></li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/ansible/" class="print-no-link">#ansible</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ansible使用说明</div>
+      <div>https://blog.cook369.xyz/2025/03/21/ansible-usage/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>likp</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年3月21日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年3月21日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/03/20/asdf-usage/" title="asdf使用说明">
+                        <span class="hidden-mobile">asdf使用说明</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://registry.npmmirror.com/@waline/client/3.5.6/files/dist/waline.css')
+      Fluid.utils.createScript('https://registry.npmmirror.com/@waline/client/3.5.6/files/dist/waline.umd.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://waline.cook369.xyz/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10,"reaction":false,"locale":{"placeholder":"欢迎评论呀！"}},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <div style="font-size: 0.85rem;"> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> </div>
+<div style="font-size: 0.85rem;"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div>
+<div style="font-size: 0.85rem;"> <a target="_blank" rel="noopener" href="https://developer.hitokoto.cn/" id="hitokoto_text"><span id="hitokoto"></span></a> <script src="https://hitokoto.cook369.xyz/?encode=js&select=%23hitokoto" defer></script> <script defer src="https://umami.cook369.xyz/script.js" data-website-id="aea1a7d0-578f-4f77-bd3e-a907b6adade1"></script> </div>
+<div style="font-size: 0.85rem;"> <span id="umami-site-data">载入访问信息...</span> <script src="/js/umami-data-view.js"></script> </div> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
