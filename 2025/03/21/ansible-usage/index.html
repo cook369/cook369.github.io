@@ -68,6 +68,10 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/waline.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -518,7 +522,7 @@
       Fluid.utils.createCssLink('https://registry.npmmirror.com/@waline/client/3.5.6/files/dist/waline.css')
       Fluid.utils.createScript('https://registry.npmmirror.com/@waline/client/3.5.6/files/dist/waline.umd.js', function() {
         var options = Object.assign(
-          {"serverURL":"https://waline.cook369.xyz/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10,"reaction":false,"locale":{"placeholder":"欢迎评论呀！"}},
+          {"serverURL":"https://waline.cook369.xyz/","path":"window.location.pathname","meta":["nick","mail"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10,"reaction":false,"login":"disable","locale":{"placeholder":"欢迎评论呀！"}},
           {
             el: '#waline',
             path: window.location.pathname
