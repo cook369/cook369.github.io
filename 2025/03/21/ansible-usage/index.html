@@ -21,20 +21,20 @@
   
     <meta name="description" content="ansible安装 使用pip安装ansible  12python get-pip.py --userpython -m pip install --user ansible  检查ansible安装  1ansible --version inventoryansible默认使用&#x2F;etc&#x2F;ansible&#x2F;hosts作为inventory文件，也可以使用-i选项指定">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ansible使用说明">
+<meta property="og:title" content="Ansible使用说明">
 <meta property="og:url" content="https://blog.cook369.xyz/2025/03/21/ansible-usage/index.html">
 <meta property="og:site_name" content="Luoye&#39;s Blog">
 <meta property="og:description" content="ansible安装 使用pip安装ansible  12python get-pip.py --userpython -m pip install --user ansible  检查ansible安装  1ansible --version inventoryansible默认使用&#x2F;etc&#x2F;ansible&#x2F;hosts作为inventory文件，也可以使用-i选项指定">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-21T10:14:09.000Z">
-<meta property="article:modified_time" content="2025-03-21T03:14:53.000Z">
+<meta property="article:modified_time" content="2025-03-21T20:48:35.000Z">
 <meta property="article:author" content="likp">
 <meta property="article:tag" content="ansible">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>ansible使用说明 - Luoye&#39;s Blog</title>
+  <title>Ansible使用说明 - Luoye&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -238,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ansible使用说明"></span>
+            <span id="subtitle" data-typed-text="Ansible使用说明"></span>
           
         </div>
 
@@ -261,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          682 字
+          691 字
         
       </span>
     
@@ -317,7 +317,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">ansible使用说明</h1>
+            <h1 id="seo-header">Ansible使用说明</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2025年3月21日 晚上
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
@@ -332,6 +340,8 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ansible --version<br></code></pre></td></tr></table></figure>
 <h1 id="inventory"><a href="#inventory" class="headerlink" title="inventory"></a>inventory</h1><p>ansible默认使用&#x2F;etc&#x2F;ansible&#x2F;hosts作为inventory文件，也可以使用-i选项指定inventory文件<br>inventory文件格式：<br>ini格式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs shell">[webservers]<br>webserver1.example.com<br>webserver2.example.com<br>webserver3.example.com<br>192.0.6.45<br><br>[databases]<br>database1.example.com<br>database2.example.com<br><br>[host]<br>host1 ansible_host=127.0.0.1 ansible_user=vagrant ansible_port=2222 ansible_ssh_private_key_file=./.vagrant/machines/host1/virtualbox/private_key<br><br>[remote]<br>remote_test<br><br>[remote:vars]<br>ansible_host=IP_ADDRESS_OF_VIRTUAL_MACHINE<br>ansible_user=USERNAME<br></code></pre></td></tr></table></figure>
+
+<h1 id="inventery-vars"><a href="#inventery-vars" class="headerlink" title="inventery vars"></a>inventery vars</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell">ansible_host=127.0.0.1<br>ansible_port=22<br>ansible_connection=ssh<br>ansible_user=xxx<br>ansible_ssh_user=xxx<br>ansible_ssh_pass=xxx<br></code></pre></td></tr></table></figure>
 
 <h1 id="playbook"><a href="#playbook" class="headerlink" title="playbook"></a>playbook</h1><p>playbook格式：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Intro</span> <span class="hljs-string">to</span> <span class="hljs-string">Ansible</span> <span class="hljs-string">Playbooks</span><br>  <span class="hljs-attr">hosts:</span> <span class="hljs-string">all</span><br>  <span class="hljs-attr">tasks:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Copy</span> <span class="hljs-string">file</span> <span class="hljs-string">hosts</span> <span class="hljs-string">with</span> <span class="hljs-string">permissions</span><br>    <span class="hljs-attr">ansible.builtin.copy:</span><br>      <span class="hljs-attr">src:</span> <span class="hljs-string">./hosts</span><br>      <span class="hljs-attr">dest:</span> <span class="hljs-string">/tmp/hosts_backup</span><br>      <span class="hljs-attr">mode:</span> <span class="hljs-number">0644</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Add</span> <span class="hljs-string">the</span> <span class="hljs-string">user</span> <span class="hljs-string">test</span><br>    <span class="hljs-attr">ansible.builtin.user:</span><br>      <span class="hljs-attr">name:</span> <span class="hljs-string">test</span><br>    <span class="hljs-attr">become:</span> <span class="hljs-literal">yes</span><br>    <span class="hljs-attr">become_method:</span> <span class="hljs-string">sudo</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Upgrade</span> <span class="hljs-string">all</span> <span class="hljs-string">apt</span> <span class="hljs-string">packages</span><br>    <span class="hljs-attr">apt:</span><br>      <span class="hljs-attr">force_apt_get:</span> <span class="hljs-literal">yes</span><br>      <span class="hljs-attr">upgrade:</span> <span class="hljs-string">dist</span><br>    <span class="hljs-attr">become:</span> <span class="hljs-literal">yes</span><br></code></pre></td></tr></table></figure>
@@ -446,7 +456,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ansible使用说明</div>
+      <div>Ansible使用说明</div>
       <div>https://blog.cook369.xyz/2025/03/21/ansible-usage/</div>
     </div>
     <div class="license-meta">
