@@ -1112,6 +1112,12 @@ links:
       "link": "https://qninq.cn/",
       "avatar": "https://qninq.cn/favicon.ico"
     }
+    - {
+      "title": "廿壴",
+      "intro": "探讨WEB技术.交流日常生活.感悟短暂人生.分享简单快乐",
+      "link": "https://blog.ganxb2.com/",
+      "avatar": "https://blog.ganxb2.com/img/favicon.ico"
+    }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
@@ -1128,7 +1134,7 @@ links:
         <li>博客名：Luoye</li>
         <li>简介：个人站点，分享经验</li>
         <li>链接：https://blog.cook369.xyz</li>
-        <li>图片：https://blog.cook369.xyz//img/favicon/favicon.png</li>
+        <li>图片：https://blog.cook369.xyz/img/favicon/favicon.png</li>
       </ul>
       '
 
