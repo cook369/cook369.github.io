@@ -238,6 +238,7 @@ custom_js:
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  - /css/waline.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -854,7 +855,7 @@ valine:
 waline:
   serverURL: 'https://waline.cook369.xyz/'
   path: window.location.pathname
-  meta: ['nick', 'mail', 'link']
+  meta: ['nick', 'mail']
   requiredMeta: ['nick']
   lang: 'zh-CN'
   emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
@@ -862,6 +863,7 @@ waline:
   wordLimit: 0
   pageSize: 10
   reaction: false
+  login: disable
   locale:
     placeholder: '欢迎评论呀！'
 
