@@ -6,7 +6,9 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "pre-commit": "lint-staged",
+    "prepare": "husky"
   },
   "hexo": {
     "version": "7.3.0"
@@ -24,6 +26,14 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-fluid": "^1.9.8",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "hexo-update-time": "^1.1.2"
+  },
+  "lint-staged": {
+    "source/_posts/*.md": "hexo-update-time"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0"
   }
 }

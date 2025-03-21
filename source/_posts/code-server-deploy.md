@@ -2,6 +2,7 @@
 layout: title
 title: 通过 docker-compose 部署 code-server
 date: 2025-03-14 10:20:00
+updated: 2025-03-17 15:00:00
 tags:
   - code-server
 ---

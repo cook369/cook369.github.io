@@ -1,9 +1,12 @@
 ---
-title: ansible使用说明
+title: Ansible使用说明
 date: 2025-03-21 10:14:09
+updated: 2025-03-21 20:48:35
 tags:
   - ansible
 ---
+
+
 # ansible安装
 1. 使用pip安装ansible
 ```shell
@@ -38,6 +41,16 @@ remote_test
 [remote:vars]
 ansible_host=IP_ADDRESS_OF_VIRTUAL_MACHINE
 ansible_user=USERNAME
+```
+
+# inventery vars
+```shell
+ansible_host=127.0.0.1
+ansible_port=22
+ansible_connection=ssh
+ansible_user=xxx
+ansible_ssh_user=xxx
+ansible_ssh_pass=xxx
 ```
 
 # playbook

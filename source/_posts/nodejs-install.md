@@ -1,6 +1,7 @@
 ---
-title: windows下nodejs安装
+title: Windows下nodejs安装
 date: 2025-03-19 22:45:56
+updated: 2025-03-20 20:00:00
 tags:
   - nodejs
   - nvm
