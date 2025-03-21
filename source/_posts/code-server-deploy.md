@@ -3,6 +3,7 @@ layout: title
 title: 通过 docker-compose 部署 code-server
 date: 2025-03-14 10:20:00
 tags:
+  - code-server
 ---
 code-server 是社区创作的 Web 版 VS Code，后端运行在服务器中，开发者基于浏览器运行 IDE。
 ## 部署配置

@@ -53,5 +53,5 @@ docker会将seccomp传递给runc中的sepc.linux.seccomp。
 [3] [seccomp: add support for "clone3" syscall in default policy](https://github.com/moby/moby/pull/42681)
 [4] [seccomp filter breaks latest glibc (in fedora rawhide) by blocking clone3 with EPERM](https://github.com/moby/moby/issues/42680)
 [5] [Seccomp security profiles for Docker](https://docs.docker.com/engine/security/seccomp/)
-[6] ["operation not permitted", a libseccomp story ](https://github.com/docker-library/official-images/issues/16829)
+[6] [operation not permitted, a libseccomp story ](https://github.com/docker-library/official-images/issues/16829)
 [7] [runtime/cgo: pthread_create failed: Operation not permitted](https://github.com/docker-library/golang/issues/467)

@@ -1,7 +1,8 @@
 ---
-title: asdf-usage
+title: asdf使用说明
 date: 2025-03-20 12:39:31
 tags:
+  - asdf
 ---
 ## 安装说明
 1. 安装依赖
