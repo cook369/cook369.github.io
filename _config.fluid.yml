@@ -501,7 +501,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/banner/index.png
+  banner_img: /img/banner/index.webp
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -573,7 +573,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/banner/post.png
+  banner_img: /img/banner/post.webp
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -940,7 +940,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/banner/archive.png
+  banner_img: /img/banner/archive.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -951,7 +951,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/banner/category.png
+  banner_img: /img/banner/category.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -980,7 +980,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/banner/tag.png
+  banner_img: /img/banner/tag.webp
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -997,7 +997,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/banner/about.png
+  banner_img: /img/banner/about.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/avatar.png
@@ -1019,7 +1019,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/banner/page.png
+  banner_img: /img/banner/page.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -1044,7 +1044,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/banner/link.png
+  banner_img: /img/banner/link.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
