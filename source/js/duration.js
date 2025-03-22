@@ -4,7 +4,7 @@
   
     function update() {
       let now = new Date();
-      now.setTime(now.getTime()+250);
+      now.setTime(now.getTime() + 1000);
       let days = (now - start) / 1000 / 60 / 60 / 24;
       let dnum = Math.floor(days);
       let hours = (now - start) / 1000 / 60 / 60 - (24 * dnum);
