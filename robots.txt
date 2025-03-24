@@ -2,8 +2,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
-
 Sitemap: https://blog.cook369.xyz/sitemap.xml
