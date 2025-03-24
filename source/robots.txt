@@ -1,0 +1,5 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://blog.cook369.xyz/sitemap.xml
