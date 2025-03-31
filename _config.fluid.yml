@@ -867,7 +867,7 @@ valine:
 waline:
   serverURL: 'https://waline.cook369.xyz/'
   path: window.location.pathname
-  meta: ['nick', 'mail']
+  meta: ['nick', 'mail', 'link']
   requiredMeta: ['nick']
   lang: 'zh-CN'
   emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
@@ -1064,24 +1064,6 @@ links:
   # 友链的成员项
   # Member item of page
   items:
-    - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/avatar.png"
-    }
-    - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/avatar.png"
-    }
-    - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/avatar.png"
-    }
     - {
       "title": "bookandmusic",
       "intro": "bookandmusic",
