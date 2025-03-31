@@ -1,3 +1,4 @@
+https://blog.cook369.xyz/2025/03/31/tmux-usage/
 https://blog.cook369.xyz/2025/03/21/ansible-usage/
 https://blog.cook369.xyz/2025/03/20/asdf-usage/
 https://blog.cook369.xyz/2025/03/19/nodejs-install/
@@ -15,6 +16,7 @@ https://blog.cook369.xyz/tags/secommp/
 https://blog.cook369.xyz/tags/harbor/
 https://blog.cook369.xyz/tags/nodejs/
 https://blog.cook369.xyz/tags/nvm/
+https://blog.cook369.xyz/tags/tmux/
 https://blog.cook369.xyz/categories/docker/
 https://blog.cook369.xyz/categories/nodejs/
 https://blog.cook369.xyz/categories/nvm/
