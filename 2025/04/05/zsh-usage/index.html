@@ -19,22 +19,22 @@
   <meta name="author" content="likp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. 简介tmux(Terminal Multiplexer)多session管理的终端程序，保持进程在后端运行，它允许您在单个会话中创建、管理和组织多个终端窗口。  会话持久化：连接断开后会话保持 多任务处理：多任务系统切换 分屏管理：一个终端中分隔屏幕，创建多个窗口  2. 安装 发行版安装  12345678910# For Ubuntu&#x2F;Debian-based systemssudo a">
+    <meta name="description" content="安装zsh123sudo apt install zshzsh --versionsudo chsh -s $(which zsh) zsh首次进入后，选择1初始化配置文件,安装oh-my-zsh会覆盖此配置。 安装oh-my-zsh123sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;install.ohmyz.sh)&quot;sh -c &quot;$(wget -O- h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tmux使用说明">
-<meta property="og:url" content="https://blog.cook369.xyz/2025/03/31/tmux-usage/index.html">
+<meta property="og:title" content="zsh使用说明">
+<meta property="og:url" content="https://blog.cook369.xyz/2025/04/05/zsh-usage/index.html">
 <meta property="og:site_name" content="Luoye&#39;s Blog">
-<meta property="og:description" content="1. 简介tmux(Terminal Multiplexer)多session管理的终端程序，保持进程在后端运行，它允许您在单个会话中创建、管理和组织多个终端窗口。  会话持久化：连接断开后会话保持 多任务处理：多任务系统切换 分屏管理：一个终端中分隔屏幕，创建多个窗口  2. 安装 发行版安装  12345678910# For Ubuntu&#x2F;Debian-based systemssudo a">
+<meta property="og:description" content="安装zsh123sudo apt install zshzsh --versionsudo chsh -s $(which zsh) zsh首次进入后，选择1初始化配置文件,安装oh-my-zsh会覆盖此配置。 安装oh-my-zsh123sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;install.ohmyz.sh)&quot;sh -c &quot;$(wget -O- h">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-31T15:40:42.000Z">
-<meta property="article:modified_time" content="2025-03-31T07:42:07.000Z">
+<meta property="article:published_time" content="2025-04-05T03:28:57.000Z">
+<meta property="article:modified_time" content="2025-04-04T19:28:53.000Z">
 <meta property="article:author" content="likp">
-<meta property="article:tag" content="tmux">
+<meta property="article:tag" content="zsh">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Tmux使用说明 - Luoye&#39;s Blog</title>
+  <title>zsh使用说明 - Luoye&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -238,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Tmux使用说明"></span>
+            <span id="subtitle" data-typed-text="zsh使用说明"></span>
           
         </div>
 
@@ -249,8 +249,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-31 15:40" pubdate>
-          2025年3月31日 下午
+        <time datetime="2025-04-05 03:28" pubdate>
+          2025年4月5日 凌晨
         </time>
       </span>
     
@@ -261,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          496 字
+          449 字
         
       </span>
     
@@ -272,7 +272,7 @@
         
         
         
-          5 分钟
+          4 分钟
         
       </span>
     
@@ -317,12 +317,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Tmux使用说明</h1>
+            <h1 id="seo-header">zsh使用说明</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2025年3月31日 早上
+                    本文最后更新于 2025年4月4日 晚上
                   
                 
               </p>
@@ -330,186 +330,21 @@
             
               <div class="markdown-body">
                 
-                <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>tmux(Terminal Multiplexer)多session管理的终端程序，保持进程在后端运行，它允许您在单个会话中创建、管理和组织多个终端窗口。</p>
-<ol>
-<li>会话持久化：连接断开后会话保持</li>
-<li>多任务处理：多任务系统切换</li>
-<li>分屏管理：一个终端中分隔屏幕，创建多个窗口</li>
-</ol>
-<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h2><ol>
-<li>发行版安装</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">For Ubuntu/Debian-based systems</span><br>sudo apt update<br>sudo apt install tmux<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">For CentOS/RHEL-based systems</span><br>sudo yum install tmux<br>sudo dnf -y install tmux<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">Verify installation</span><br>tmux -V<br></code></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>git安装</p>
-</li>
-<li><p>安装依赖</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">install Tmux dependencies on Debian</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">apt-get install libevent ncurses libevent-dev ncurses-dev build-essential bison pkg-config</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">install Tmux dependencies on RHEL/CentOS</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">yum install libevent ncurses libevent-devel ncurses-devel gcc make bison pkg-config</span><br></code></pre></td></tr></table></figure>
-<ol start="2">
-<li>编译</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">clone</span> install</span><br>git clone https://github.com/tmux/tmux.git<br>cd tmux<br>sh autogen.sh<br>./configure &amp;&amp; make<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">download tmux and install without git cloning</span><br>wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz<br>tar xzvf tmux-3.3a.tar.gz<br>cd tmux-3.3a<br>./configure<br>make &amp;&amp; sudo make install<br><br></code></pre></td></tr></table></figure>
+                <h1 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt install zsh<br>zsh --version<br>sudo chsh -s $(which zsh)<br></code></pre></td></tr></table></figure>
+<p><code>zsh</code>首次进入后，选择<code>1</code>初始化配置文件,安装oh-my-zsh会覆盖此配置。</p>
+<h1 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">sh -c &quot;$(curl -fsSL https://install.ohmyz.sh)&quot;<br>sh -c &quot;$(wget -O- https://install.ohmyz.sh)&quot;<br>sh -c &quot;$(fetch -o - https://install.ohmyz.sh)&quot;<br></code></pre></td></tr></table></figure>
 
-<h2 id="3-常用命令"><a href="#3-常用命令" class="headerlink" title="3. 常用命令"></a>3. 常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">starting a New Session</span><br><span class="hljs-meta prompt_">&gt; </span><span class="language-bash">tmux</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">detaching from a Session</span><br>Ctrl+b, then d<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">reattaching to a Session</span><br><span class="hljs-meta prompt_">&gt; </span><span class="language-bash">tmux attach</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">creating a New Window</span><br>Ctrl+b, then c<br><span class="hljs-meta prompt_">  </span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">switching Between Windows</span><br>Ctrl+b, then n (for next window)<br>Ctrl+b, then p (for previous window)<br><br></code></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">splitting Panes Horizontally</span><br>Ctrl+b, then \&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">splitting Panes Vertically</span><br>Ctrl+b, then %<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">resizing Panes</span><br>Ctrl+b, then arrow keys<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">renaming a Session</span><br><span class="hljs-meta prompt_">&gt; </span><span class="language-bash">tmux rename-session -t [old-name] [new-name]</span><br><span class="hljs-meta prompt_">  </span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">list All Sessions</span><br><span class="hljs-meta prompt_">&gt; </span><span class="language-bash">tmux <span class="hljs-built_in">ls</span></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">killing a Session</span><br><span class="hljs-meta prompt_">&gt; </span><span class="language-bash">tmux kill-session -t [session-name]</span><br></code></pre></td></tr></table></figure>
+<h1 id="安装powerlevel10k主题"><a href="#安装powerlevel10k主题" class="headerlink" title="安装powerlevel10k主题"></a>安装powerlevel10k主题</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git &quot;$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;/themes/powerlevel10k&quot;<br>git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git &quot;$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;/themes/powerlevel10k&quot;<br><br>sed -i &#x27;s/^ZSH_THEME=.*/ZSH_THEME=&quot;powerlevel10k\/powerlevel10k&quot;/&#x27; ~/.zshrc<br></code></pre></td></tr></table></figure>
+<p>修改zshrc,配置主题<code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code></p>
+<p>重新配置主题<code>p10k configure</code></p>
+<h1 id="安装其他工具"><a href="#安装其他工具" class="headerlink" title="安装其他工具"></a>安装其他工具</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">powerlevel10k主题</span><br>git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k<br><span class="hljs-meta prompt_"># </span><span class="language-bash">zsh-autosuggestions自动提示插件</span><br>git clone https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions<br><span class="hljs-meta prompt_"># </span><span class="language-bash">zsh-syntax-highlighting语法高亮插件</span><br>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">下载失败可以尝试以下命令</span><br>git clone https://ghproxy.net/https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k<br>git clone https://ghproxy.net/https://github.com/zsh-users/zsh-autosuggestions $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions<br>git clone https://ghproxy.net/https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting<br></code></pre></td></tr></table></figure>
 
-<h2 id="4-快捷键"><a href="#4-快捷键" class="headerlink" title="4. 快捷键"></a>4. 快捷键</h2><table>
-<thead>
-<tr>
-<th align="center">操作</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>CTRL</code>+<code>b</code> <code>&lt;command&gt;</code></td>
-<td>发送 <code>&lt;command&gt;</code> 到 tmux</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td><strong>常用命令</strong></td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>?</code></td>
-<td>显示帮助信息 (<code>q</code>退出)</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>:</code></td>
-<td>输入 tmux 命令</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td><strong>窗口命令</strong></td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> +  <code>c</code></td>
-<td>创建新窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> +  <code>,</code></td>
-<td>重命名窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> +  <code>&amp;</code></td>
-<td>关闭窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> +  <code>p</code></td>
-<td>切换上一个窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>n</code></td>
-<td>切换下一个窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>w</code></td>
-<td>显示所有窗口，方向键选择窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> +</td>
-<td><strong>窗格(pane)命令</strong></td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>%</code>  <code>tmux split-window -v</code></td>
-<td>垂直分隔 vertically</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>&quot;</code>  <code>tmux split-window -h</code></td>
-<td>水平分隔 horizontally</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>z</code></td>
-<td>放大缩小</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + →</td>
-<td>切换到右侧</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + ←</td>
-<td>切换到左侧</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + ↑</td>
-<td>切换到上侧</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + ↓</td>
-<td>切换到下侧</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>!</code></td>
-<td>转换panel到窗口</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>x</code></td>
-<td>关闭panel</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>[</code></td>
-<td>进入复制模式</td>
-</tr>
-<tr>
-<td align="center"><code>CTRL</code>+<code>b</code> + <code>:setw -g mode-keys vi</code></td>
-<td>使用vi快捷键</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td><strong>会话命令</strong></td>
-</tr>
-<tr>
-<td align="center"><code>d</code></td>
-<td>退出会话</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td><strong>其他</strong></td>
-</tr>
-<tr>
-<td align="center"><code>tmux new</code></td>
-<td>创建新会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux new -s mysession</code></td>
-<td>创建新会话mysession</td>
-</tr>
-<tr>
-<td align="center"><code>tmux new-session -A -s mysession</code></td>
-<td>创建或连接到会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux kill-session -t mysession</code></td>
-<td>终止会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux kill-session -a</code></td>
-<td>终止所有会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux kill-session -a -t mysession</code></td>
-<td>终止mysession外所有会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux ls</code> <code>tmux list-sessions</code></td>
-<td>列出所有会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux a</code> <code>tmux attach-session</code></td>
-<td>连接到最后一个会话</td>
-</tr>
-<tr>
-<td align="center"><code>tmux a -t mysession</code></td>
-<td>连接到mysession</td>
-</tr>
-<tr>
-<td align="center"><code>tmux resize-pane -L 20</code></td>
-<td>调整分隔线位置(LRDU)</td>
-</tr>
-</tbody></table>
+<h1 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">下载字体</span><br>wget https://ghfast.top/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf &amp;&amp;<br>wget https://ghfast.top/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf  &amp;&amp;<br>wget https://ghfast.top/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf  &amp;&amp;<br>wget https://ghfast.top/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装字体</span><br>sudo mkdir /usr/share/fonts/truetype/MesloLGS<br>sudo mv *.ttf /usr/share/fonts/truetype/MesloLGS<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装fontconfig工具</span><br>sudo apt install fontconfig<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">刷新字体缓存</span><br>fc-cache -fv<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">测试字体显示</span><br>echo $&#x27;\uf115&#x27;  # 能打印出文件夹图标则成功<br></code></pre></td></tr></table></figure>
+
+<h1 id="应用主题和插件"><a href="#应用主题和插件" class="headerlink" title="应用主题和插件"></a>应用主题和插件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">编辑配置文件，修改主题和插件</span><br>vim ~/.zshrc<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">修改主题</span><br>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">启用插件</span><br>plugins=(<br>  git<br>  zsh-autosuggestions<br>  zsh-syntax-highlighting<br>)<br></code></pre></td></tr></table></figure>
+
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://github.com/tmux/tmux">source</a></li>
-<li><a target="_blank" rel="noopener" href="https://tmuxcheatsheet.com/">tmuxcheatsheet</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.lololowe.com/posts/dd02/">linux 终端美化</a></li>
 </ol>
 
                 
@@ -523,7 +358,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/tmux/" class="print-no-link">#tmux</a>
+        <a href="/tags/zsh/" class="print-no-link">#zsh</a>
       
     </div>
   
@@ -535,8 +370,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Tmux使用说明</div>
-      <div>https://blog.cook369.xyz/2025/03/31/tmux-usage/</div>
+      <div>zsh使用说明</div>
+      <div>https://blog.cook369.xyz/2025/04/05/zsh-usage/</div>
     </div>
     <div class="license-meta">
       
@@ -548,13 +383,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月31日</div>
+          <div>2025年4月5日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年3月31日</div>
+          <div>2025年4月4日</div>
         </div>
       
       
@@ -585,18 +420,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/05/zsh-usage/" title="zsh使用说明">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">zsh使用说明</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/21/ansible-usage/" title="Ansible使用说明">
-                        <span class="hidden-mobile">Ansible使用说明</span>
+                      <a href="/2025/03/31/tmux-usage/" title="Tmux使用说明">
+                        <span class="hidden-mobile">Tmux使用说明</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
