@@ -1,3 +1,4 @@
+https://blog.cook369.xyz/2025/04/05/wake-on-lan/
 https://blog.cook369.xyz/2025/04/05/wsl-share-windows-font/
 https://blog.cook369.xyz/2025/04/05/zsh-usage/
 https://blog.cook369.xyz/2025/03/31/tmux-usage/
@@ -19,6 +20,7 @@ https://blog.cook369.xyz/tags/harbor/
 https://blog.cook369.xyz/tags/nodejs/
 https://blog.cook369.xyz/tags/nvm/
 https://blog.cook369.xyz/tags/tmux/
+https://blog.cook369.xyz/tags/WoL/
 https://blog.cook369.xyz/tags/wsl/
 https://blog.cook369.xyz/tags/zsh/
 https://blog.cook369.xyz/categories/docker/
