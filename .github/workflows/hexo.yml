@@ -23,6 +23,10 @@ jobs:
         npm install
         npm install -g hexo-cli
 
+    - uses: szenius/set-timezone@v2.0
+      with:
+        timezoneLinux: "Asia/Shanghai"
+
     - name: Fix file upate data
       run: |
         git ls-files -z | while read -d '' path; do touch -d $(git log -1 --format="@%ct" "$path") "$path" && echo "Fixed: $path"; done
