@@ -5,6 +5,7 @@ tags:
   - zsh
 ---
 
+
 # 安装zsh
 ```shell
 sudo apt install zsh
@@ -33,20 +34,17 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 
 # 安装其他工具
 ```shell
-# powerlevel10k主题
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 # zsh-autosuggestions自动提示插件
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # zsh-syntax-highlighting语法高亮插件
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# zsh-z目录切换跳转
+git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
-# 下载失败可以尝试以下命令
-git clone https://ghproxy.net/https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-git clone https://ghproxy.net/https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://ghproxy.net/https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 # 安装字体
+1. 安装MesloLGS
 ```shell
 # 下载字体
 wget https://ghfast.top/https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf &&
@@ -68,6 +66,24 @@ fc-cache -fv
 # 测试字体显示
 echo $'\uf115'  # 能打印出文件夹图标则成功
 ```
+2. 安装powerline字体
+```shell
+sudo apt install fonts-powerline
+
+sudo dnf install powerline-fonts
+
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+3. 字体下载网站
+- https://github.com/ryanoasis/nerd-fonts
+- https://www.nerdfonts.com/font-downloads
 
 # 应用主题和插件
 ```shell
@@ -82,6 +98,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  z
 )
 ```
 
