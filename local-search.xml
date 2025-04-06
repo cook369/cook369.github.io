@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>nmcli-usage</title>
+    <link href="/2025/04/06/nmcli-usage/"/>
+    <url>/2025/04/06/nmcli-usage/</url>
+    
+    <content type="html"><![CDATA[<h1 id="使用nmcli连接wifi"><a href="#使用nmcli连接wifi" class="headerlink" title="使用nmcli连接wifi"></a>使用nmcli连接wifi</h1><ol><li>启用并查看可用wifi访问点</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 启用wifi</span><br>nmcli radio wifi on<br><span class="hljs-comment"># 查看wifi</span><br>nmcli dev wifi list<br></code></pre></td></tr></table></figure><ol start="2"><li>连接wifi</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmcli dev wifi connect xxx password xxxxxx<br></code></pre></td></tr></table></figure><ol start="3"><li>配置静态ip</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ipv4</span><br>nmcli con modify xxx ipv4.method manual ipv4.addresses 192.0.2.1/24 ipv4.gateway 192.0.2.254 ipv4.dns 192.0.2.200 ipv4.dns-search example.com<br><span class="hljs-comment"># ipv6</span><br>nmcli con modify xxx ipv6.method manual ipv6.addresses 2001:db8:1::1/64 ipv6.gateway 2001:db8:1::fffe ipv6.dns 2001:db8:1::ffbb ipv6.dns-search example.com<br><br><span class="hljs-comment"># 修改配置后需要重新激活连接</span><br>nmcli con up xxx<br></code></pre></td></tr></table></figure><ol start="4"><li>查看所有连接</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmcli con show<br></code></pre></td></tr></table></figure><ol start="5"><li>修改连接状态</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmcli con up xxxx <br>nmcli con down<br>nmcli con del xxxx<br></code></pre></td></tr></table></figure><ol start="6"><li>配置自动连接</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmcli con modify xxx con.autoconnect <span class="hljs-built_in">yes</span><br></code></pre></td></tr></table></figure><ol start="7"><li>创建热点</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># MyHostspot 连接名，  MyHostspotSSID  热点名，   12345678 热点密码</span><br>nmcli device wifi hotspot ifname wlan0 con-name MyHostspot ssid MyHostspotSSID password 12345678<br></code></pre></td></tr></table></figure><ol start="8"><li>图形化工具</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmtui<br></code></pre></td></tr></table></figure><ol start="9"><li>显示连接</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmcli dev wifi show-password<br></code></pre></td></tr></table></figure><ol start="10"><li>密码保存路径</li></ol><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">/etc/sysconfig/network-scripts/</span>*<span class="hljs-string">.nmconnections</span><br><span class="hljs-string">/etc/netplan/</span>*<span class="hljs-string">.yaml</span><br></code></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol><li><a href="https://docs.redhat.com/zh-cn/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/proc_connecting-to-a-wifi-network-by-using-nmcli_assembly_managing-wifi-cons">使用 nmcli 连接到 wifi 网络</a></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>nmcli</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Wake-On-Lan</title>
     <link href="/2025/04/05/wake-on-lan/"/>
     <url>/2025/04/05/wake-on-lan/</url>
