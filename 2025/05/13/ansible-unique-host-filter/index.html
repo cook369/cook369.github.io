@@ -19,23 +19,22 @@
   <meta name="author" content="likp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍本文介绍RPMDB 文件损坏问题分析 检查使用rpm的进程 检查正在使用 &#x2F;var&#x2F;lib&#x2F;rpm 的进程fuser -v &#x2F;var&#x2F;lib&#x2F;rpm 停止任何由 fuser -v &#x2F;var&#x2F;lib&#x2F;rpm 报告的服务或进程 删除 &#x2F;var&#x2F;lib&#x2F;rpm&#x2F;Packages 文件rm &#x2F;var&#x2F;l">
+    <meta name="description" content="ansible-playbook中根据主机ip聚合 inventery测试文件  12345[hosts]172.17.100.100 ansible_ssh_user&#x3D;root ansible_ssh_pass&#x3D;passwordtest-1 ansible_host&#x3D;172.17.100.100 ansible_ssh_user&#x3D;root ansible_ssh_pass&#x3D;passwordtes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RPMDB 文件损坏问题分析">
-<meta property="og:url" content="https://blog.cook369.xyz/2025/05/13/rpmdb-failed/index.html">
+<meta property="og:title" content="ansible-playbook中根据主机ip聚合">
+<meta property="og:url" content="https://blog.cook369.xyz/2025/05/13/ansible-unique-host-filter/index.html">
 <meta property="og:site_name" content="Luoye&#39;s Blog">
-<meta property="og:description" content="介绍本文介绍RPMDB 文件损坏问题分析 检查使用rpm的进程 检查正在使用 &#x2F;var&#x2F;lib&#x2F;rpm 的进程fuser -v &#x2F;var&#x2F;lib&#x2F;rpm 停止任何由 fuser -v &#x2F;var&#x2F;lib&#x2F;rpm 报告的服务或进程 删除 &#x2F;var&#x2F;lib&#x2F;rpm&#x2F;Packages 文件rm &#x2F;var&#x2F;l">
+<meta property="og:description" content="ansible-playbook中根据主机ip聚合 inventery测试文件  12345[hosts]172.17.100.100 ansible_ssh_user&#x3D;root ansible_ssh_pass&#x3D;passwordtest-1 ansible_host&#x3D;172.17.100.100 ansible_ssh_user&#x3D;root ansible_ssh_pass&#x3D;passwordtes">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-13T11:03:25.000Z">
-<meta property="article:modified_time" content="2025-05-13T11:06:58.000Z">
+<meta property="article:published_time" content="2025-05-13T11:08:18.000Z">
+<meta property="article:modified_time" content="2025-05-13T11:27:06.000Z">
 <meta property="article:author" content="likp">
-<meta property="article:tag" content="rpmdb">
-<meta property="article:tag" content="yum">
+<meta property="article:tag" content="ansible">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>RPMDB 文件损坏问题分析 - Luoye&#39;s Blog</title>
+  <title>ansible-playbook中根据主机ip聚合 - Luoye&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -239,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="RPMDB 文件损坏问题分析"></span>
+            <span id="subtitle" data-typed-text="ansible-playbook中根据主机ip聚合"></span>
           
         </div>
 
@@ -250,7 +249,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-13 19:03" pubdate>
+        <time datetime="2025-05-13 19:08" pubdate>
           2025年5月13日 晚上
         </time>
       </span>
@@ -262,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          609 字
+          312 字
         
       </span>
     
@@ -273,7 +272,7 @@
         
         
         
-          6 分钟
+          3 分钟
         
       </span>
     
@@ -318,7 +317,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">RPMDB 文件损坏问题分析</h1>
+            <h1 id="seo-header">ansible-playbook中根据主机ip聚合</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
@@ -331,49 +330,19 @@
             
               <div class="markdown-body">
                 
-                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>本文介绍RPMDB 文件损坏问题分析</p>
-<h1 id="检查使用rpm的进程"><a href="#检查使用rpm的进程" class="headerlink" title="检查使用rpm的进程"></a>检查使用rpm的进程</h1><ol>
-<li>检查正在使用 &#x2F;var&#x2F;lib&#x2F;rpm 的进程<code>fuser -v /var/lib/rpm</code></li>
-<li>停止任何由 fuser -v &#x2F;var&#x2F;lib&#x2F;rpm 报告的服务或进程</li>
-<li>删除 &#x2F;var&#x2F;lib&#x2F;rpm&#x2F;Packages 文件<code>rm /var/lib/rpm/__db*</code></li>
+                <h1 id="ansible-playbook中根据主机ip聚合"><a href="#ansible-playbook中根据主机ip聚合" class="headerlink" title="ansible-playbook中根据主机ip聚合"></a>ansible-playbook中根据主机ip聚合</h1><ol>
+<li>inventery测试文件</li>
 </ol>
-<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><ol>
-<li>安装rpm-deathwatch源</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">Centos7</span><br>curl https://people.redhat.com/kwalker/repos/rpm-deathwatch/rhel7/rpm-deathwatch-rhel-7.repo -o /etc/yum.repos.d/rpm-deathwatch.repo<br><span class="hljs-meta prompt_"># </span><span class="language-bash">Centos8</span><br>curl https://people.redhat.com/kwalker/repos/rpm-deathwatch/rhel8/rpm-deathwatch-rhel-8.repo -o /etc/yum.repos.d/rpm-deathwatch.repo<br></code></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[hosts]</span><br>172.17.100.100 <span class="hljs-attr">ansible_ssh_user</span>=root ansible_ssh_pass=password<br>test-1 <span class="hljs-attr">ansible_host</span>=<span class="hljs-number">172.17</span>.<span class="hljs-number">100.100</span> ansible_ssh_user=root ansible_ssh_pass=password<br>test-2 <span class="hljs-attr">ansible_host</span>=<span class="hljs-number">172.17</span>.<span class="hljs-number">100.100</span> ansible_ssh_user=root ansible_ssh_pass=password<br>test-3 <span class="hljs-attr">ansible_host</span>=<span class="hljs-number">172.17</span>.<span class="hljs-number">100.100</span> ansible_ssh_user=root ansible_ssh_pass=password<br></code></pre></td></tr></table></figure>
 <ol start="2">
-<li>安装rpm-deathwatch</li>
+<li>palybook</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install -y yum-utils kernel-&#123;devel,headers,debuginfo&#125;-$(uname -r) systemtap &amp;&amp; debuginfo-install -y kernel<br>yum install rpm-deathwatch<br></code></pre></td></tr></table></figure>
-<ol start="3">
-<li>启动rpm-deathwatch服务</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">开机启动</span><br>systemctl enable --now rpm-deathwatch<br></code></pre></td></tr></table></figure>
-<ol start="4">
-<li>检测rpm-deathwatch服务</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">systemctl status rpm-deathwatch<br></code></pre></td></tr></table></figure>
-<ol start="5">
-<li>查看rpm-deathwatch日志<code>/var/log/rpm-deathwatch*</code></li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">Fri Dec  4 00:00:17 2020 EST: sig.send:</span> <span class="hljs-string">SIGKILL</span> <span class="hljs-string">was</span> <span class="hljs-string">sent</span> <span class="hljs-string">to</span> <span class="hljs-string">yum</span> <span class="hljs-string">(pid:31171)</span> <span class="hljs-string">by</span> <span class="hljs-string">uid:0</span> <span class="hljs-string">using</span> <span class="hljs-string">signal_generate</span><br><span class="hljs-attr">Fri Dec  4 00:00:17 2020 EST: sig.send: Process tree:</span><br> <span class="hljs-string">-&gt;systemd[1]</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&lt;None</span> <span class="hljs-string">found&gt;</span><br>  <span class="hljs-string">-&gt;BESClient[3563]</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&lt;None</span> <span class="hljs-string">found&gt;</span><br><span class="hljs-attr">Fri Dec  4 00:00:17 2020 EST: kprocess.exit:</span> <span class="hljs-string">yum(pid:31171)</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Code</span>   <span class="hljs-number">9</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;/usr/bin/python /usr/bin/yum -y update</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">Tue May 13 14:49:17 2025 CST:</span> <span class="hljs-string">Now</span> <span class="hljs-string">monitoring</span> <span class="hljs-string">for</span> <span class="hljs-string">process</span> <span class="hljs-string">termination</span> <span class="hljs-string">signals</span><br><span class="hljs-attr">Tue May 13 15:06:54 2025 CST: syscall.sys_group_exit:</span> <span class="hljs-string">rpm(pid:13060)</span><br><span class="hljs-attr">Tue May 13 15:06:54 2025 CST: kprocess.exit:</span> <span class="hljs-string">rpm(pid:13060)</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Code</span> <span class="hljs-number">256</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;rpm -q qperf&quot;</span><br><span class="hljs-attr">Tue May 13 15:06:58 2025 CST: sys.kill:</span> <span class="hljs-string">kill(pid:13155)</span> <span class="hljs-string">called</span> <span class="hljs-string">kill(13064,</span> <span class="hljs-string">SIGKILL)</span><br><span class="hljs-attr">Tue May 13 15:06:58 2025 CST: sig.send:</span> <span class="hljs-string">SIGKILL</span> <span class="hljs-string">was</span> <span class="hljs-string">sent</span> <span class="hljs-string">to</span> <span class="hljs-string">yum</span> <span class="hljs-string">(pid:13064)</span> <span class="hljs-string">by</span> <span class="hljs-string">uid:0</span> <span class="hljs-string">using</span> <span class="hljs-string">signal_generate</span><br><span class="hljs-attr">Tue May 13 15:06:58 2025 CST: sig.send: Process tree:</span><br> <span class="hljs-string">-&gt;systemd[1]</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&lt;None</span> <span class="hljs-string">found&gt;</span><br>  <span class="hljs-string">-&gt;sh[13149]</span> <span class="hljs-bullet">-</span> <span class="hljs-string">/bin/sh</span> <span class="hljs-string">-c</span> <span class="hljs-string">ps</span> <span class="hljs-string">-ef</span> <span class="hljs-string">|</span> <span class="hljs-string">grep</span> <span class="hljs-string">&#x27;yum install&#x27;</span> <span class="hljs-string">|</span> <span class="hljs-string">grep</span> <span class="hljs-string">-v</span> <span class="hljs-string">grep</span> <span class="hljs-string">|</span> <span class="hljs-string">awk</span> <span class="hljs-string">&#x27;&#123;print &#125;&#x27;</span> <span class="hljs-string">|</span> <span class="hljs-string">xargs</span> <span class="hljs-string">kill</span> <span class="hljs-number">-9</span><br>   <span class="hljs-string">-&gt;xargs[13154]</span> <span class="hljs-bullet">-</span> <span class="hljs-string">xargs</span> <span class="hljs-string">kill</span> <span class="hljs-number">-9</span><br>    <span class="hljs-string">-&gt;kill[13155]</span> <span class="hljs-bullet">-</span> <span class="hljs-string">xargs</span> <span class="hljs-string">kill</span> <span class="hljs-number">-9</span><br><span class="hljs-attr">Tue May 13 15:06:58 2025 CST: kprocess.exit:</span> <span class="hljs-string">yum(pid:13064)</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Code</span>   <span class="hljs-number">9</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;/usr/bin/python /bin/yum install qperf -y&quot;</span><br><span class="hljs-attr">Tue May 13 15:07:26 2025 CST: syscall.sys_group_exit:</span> <span class="hljs-string">python(pid:14058)</span><br><span class="hljs-attr">Tue May 13 15:07:26 2025 CST: kprocess.exit:</span> <span class="hljs-string">python(pid:14058)</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Code</span> <span class="hljs-number">256</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;/usr/bin/python --&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">hosts</span><br>  <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">tasks:</span><br>  <span class="hljs-comment"># Build leader hosts list based on unique ansible_host</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">print</span> <span class="hljs-string">debug</span> <span class="hljs-string">host</span> <span class="hljs-string">info</span><br>    <span class="hljs-attr">debug:</span><br>      <span class="hljs-attr">msg:</span> <span class="hljs-string">&gt;-</span><br><span class="hljs-string">        &#123;&#123; ansible_play_hosts&#125;&#125; &#123;&#123; inventory_hostname &#125;&#125; &#123;&#123; hostvars &#125;&#125;</span><br><span class="hljs-string"></span>    <span class="hljs-attr">run_once:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">delegate_to:</span> <span class="hljs-string">localhost</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">方式1</span><br>    <span class="hljs-attr">run_once:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">delegate_to:</span> <span class="hljs-string">localhost</span><br>    <span class="hljs-attr">block:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">set_fact:</span><br>          <span class="hljs-attr">inventory_leader_str:</span> <span class="hljs-string">|</span><br><span class="hljs-string">              &#123;%- set combined = [] %&#125;</span><br><span class="hljs-string">              &#123;%- for host in ansible_play_hosts %&#125;</span><br><span class="hljs-string">              &#123;%- set item = &#123;</span><br><span class="hljs-string">                  &#x27;host_key&#x27;: hostvars[host].ansible_host | default(host),</span><br><span class="hljs-string">                  &#x27;inventory_hostname&#x27;: host</span><br><span class="hljs-string">              &#125; %&#125;</span><br><span class="hljs-string">              &#123;&#123; combined.append(item) &#125;&#125;</span><br><span class="hljs-string">              &#123;%- endfor %&#125;</span><br><span class="hljs-string">              &#123;# 去重 host_key #&#125;</span><br><span class="hljs-string">              &#123;%- set seen = [] %&#125;</span><br><span class="hljs-string">              &#123;%- set result = [] %&#125;</span><br><span class="hljs-string">              &#123;%- for item in combined %&#125;</span><br><span class="hljs-string">              &#123;%- if item.host_key not in seen %&#125;</span><br><span class="hljs-string">                  &#123;&#123; seen.append(item.host_key) &#125;&#125;</span><br><span class="hljs-string">                  &#123;&#123; result.append(item.inventory_hostname) &#125;&#125;</span><br><span class="hljs-string">              &#123;%- endif %&#125;</span><br><span class="hljs-string">              &#123;%- endfor %&#125;</span><br><span class="hljs-string">              &#123;&#123; result &#125;&#125;</span><br><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">set_fact:</span><br>          <span class="hljs-attr">inventory_leader_1:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">&#123;&#123; inventory_leader_str|from_yaml &#125;&#125;</span>&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">pring</span> <span class="hljs-string">inventory_leader</span><br>        <span class="hljs-attr">debug:</span><br>          <span class="hljs-attr">msg:</span> <span class="hljs-string">&gt;-</span><br><span class="hljs-string">              &#123;&#123; inventory_leader_1 &#125;&#125;</span><br><span class="hljs-string"></span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">方式2</span><br>    <span class="hljs-attr">block:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">leader_key</span> <span class="hljs-string">per</span> <span class="hljs-string">host</span><br>        <span class="hljs-attr">set_fact:</span><br>          <span class="hljs-attr">leader_key:</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">&#123;&#123; ansible_host | default(inventory_hostname) &#125;&#125;</span>&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">debug</span> <span class="hljs-number">2</span><br>        <span class="hljs-attr">debug:</span><br>          <span class="hljs-attr">msg:</span> <span class="hljs-string">&gt;-</span><br><span class="hljs-string">              &#123;&#123; ansible_play_hosts | map(&#x27;extract&#x27;, hostvars) | unique(attribute=&#x27;leader_key&#x27;) | map(attribute=&#x27;inventory_hostname&#x27;) | list&#125;&#125;</span><br><span class="hljs-string"></span>        <span class="hljs-attr">run_once:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-attr">delegate_to:</span> <span class="hljs-string">localhost</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">方式3</span><br>    <span class="hljs-attr">block:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">gather</span> <span class="hljs-string">facts</span><br>        <span class="hljs-attr">setup:</span><br>          <span class="hljs-attr">filter:</span> <span class="hljs-string">ansible_default_ipv4</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">debug</span> <span class="hljs-number">3</span><br>        <span class="hljs-attr">debug:</span><br>          <span class="hljs-attr">msg:</span> <span class="hljs-string">&gt;-</span><br><span class="hljs-string">            &#123;&#123; ansible_play_hosts | map(&#x27;extract&#x27;, hostvars) | unique(attribute=&#x27;ansible_default_ipv4.address&#x27;) | map(attribute=&#x27;inventory_hostname&#x27;) | list&#125;&#125;</span><br><span class="hljs-string"></span>        <span class="hljs-attr">run_once:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-attr">delegate_to:</span> <span class="hljs-string">localhost</span><br></code></pre></td></tr></table></figure>
 
-<h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>rpm、yum 或 dnf 没有干净地退出，在<code>/var/lib/rpm</code>留下锁文件(<code>__db001</code> –  <code>__db005</code>)。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查看留下锁文件的进程 pid</span><br>db_stat -C l -h /var/lib/rpm<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">检查过期锁文件</span><br>cd /var/lib/rpm<br>/usr/lib/rpm/rpmdb_stat -CA<br></code></pre></td></tr></table></figure>
-<p>过期的锁通常是由于进程以异常方式被终止（电源丢失、内核崩溃、“kill”命令）。<br>常见原因是自动化工具超时结束进程，或者yum进程被<code>kill -9</code>，没有让 rpm 清除锁文件。<br>此问题可以通过停止使用 <code>/var/lib/rpm</code> 目录下文件的所有进程并删除这些文件，可以通过<code>lsof | grep /var/lib/rpm</code>检查，或通过重启（重启也会删除这些文件）来解决。</p>
-<h1 id="处理办法"><a href="#处理办法" class="headerlink" title="处理办法"></a>处理办法</h1><ol>
-<li>检查正在使用 &#x2F;var&#x2F;lib&#x2F;rpm 的进程<code>fuser -v /var/lib/rpm</code></li>
-<li>停止任何由 fuser -v &#x2F;var&#x2F;lib&#x2F;rpm 报告的服务或进程</li>
-<li>删除 &#x2F;var&#x2F;lib&#x2F;rpm&#x2F;Packages 文件<code>rm /var/lib/rpm/__db*</code></li>
-</ol>
-<h1 id="可选处理过程"><a href="#可选处理过程" class="headerlink" title="可选处理过程"></a>可选处理过程</h1><ol>
-<li>检查rpm是否正常<code>rpm –quiet -qa</code> </li>
-<li>重建索引<code>rpm --rebuilddb</code></li>
-<li>清理缓存<code>yum clean all</code></li>
-</ol>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://access.redhat.com/solutions/3330211">debug recurring rpm database corruption</a></li>
+<h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><ol>
+<li>方式1使用jinja语法，选出首次出现host_key对应的inventory_hostname</li>
+<li>方式2使用map和unique，根据leader_key去重</li>
+<li>方式3使用setup模块，获取ansible_default_ipv4.address，然后根据ip地址去重,需要连接主机获取基本信息</li>
 </ol>
 
                 
@@ -383,34 +352,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yum/" class="category-chain-item">yum</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/rpmdb/" class="print-no-link">#rpmdb</a>
-      
-        <a href="/tags/yum/" class="print-no-link">#yum</a>
+        <a href="/tags/ansible/" class="print-no-link">#ansible</a>
       
     </div>
   
@@ -422,8 +368,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>RPMDB 文件损坏问题分析</div>
-      <div>https://blog.cook369.xyz/2025/05/13/rpmdb-failed/</div>
+      <div>ansible-playbook中根据主机ip聚合</div>
+      <div>https://blog.cook369.xyz/2025/05/13/ansible-unique-host-filter/</div>
     </div>
     <div class="license-meta">
       
@@ -472,18 +418,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/05/13/ansible-unique-host-filter/" title="ansible-playbook中根据主机ip聚合">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ansible-playbook中根据主机ip聚合</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/15/git-proxy/" title="Git配置代理">
-                        <span class="hidden-mobile">Git配置代理</span>
+                      <a href="/2025/05/13/rpmdb-failed/" title="RPMDB 文件损坏问题分析">
+                        <span class="hidden-mobile">RPMDB 文件损坏问题分析</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

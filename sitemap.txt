@@ -1,3 +1,4 @@
+https://blog.cook369.xyz/2025/05/13/ansible-unique-host-filter/
 https://blog.cook369.xyz/2025/05/13/rpmdb-failed/
 https://blog.cook369.xyz/2025/04/15/git-proxy/
 https://blog.cook369.xyz/2025/04/14/authelia-usage/
