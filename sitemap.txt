@@ -1,3 +1,4 @@
+https://blog.cook369.xyz/2025/05/13/rpmdb-failed/
 https://blog.cook369.xyz/2025/04/15/git-proxy/
 https://blog.cook369.xyz/2025/04/14/authelia-usage/
 https://blog.cook369.xyz/2025/04/06/nmcli-usage/
@@ -10,8 +11,8 @@ https://blog.cook369.xyz/2025/03/20/asdf-usage/
 https://blog.cook369.xyz/2025/03/19/nodejs-install/
 https://blog.cook369.xyz/2025/03/13/harbor/
 https://blog.cook369.xyz/2025/03/14/code-server-deploy/
-https://blog.cook369.xyz/categories/index.html
 https://blog.cook369.xyz/about/index.html
+https://blog.cook369.xyz/categories/index.html
 https://blog.cook369.xyz/tags/index.html
 https://blog.cook369.xyz/
 https://blog.cook369.xyz/tags/ansible/
@@ -26,10 +27,13 @@ https://blog.cook369.xyz/tags/harbor/
 https://blog.cook369.xyz/tags/nmcli/
 https://blog.cook369.xyz/tags/nodejs/
 https://blog.cook369.xyz/tags/nvm/
+https://blog.cook369.xyz/tags/rpmdb/
+https://blog.cook369.xyz/tags/yum/
 https://blog.cook369.xyz/tags/tmux/
 https://blog.cook369.xyz/tags/WoL/
 https://blog.cook369.xyz/tags/wsl/
 https://blog.cook369.xyz/tags/zsh/
 https://blog.cook369.xyz/categories/docker/
 https://blog.cook369.xyz/categories/nodejs/
+https://blog.cook369.xyz/categories/yum/
 https://blog.cook369.xyz/categories/nvm/
