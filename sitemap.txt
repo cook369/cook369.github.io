@@ -1,3 +1,4 @@
+https://blog.cook369.xyz/2025/06/19/virsh-usage/
 https://blog.cook369.xyz/2025/05/24/buildx-in-cionfig/
 https://blog.cook369.xyz/2025/05/24/nexus3-reset-password/
 https://blog.cook369.xyz/2025/05/13/ansible-unique-host-filter/
@@ -14,9 +15,9 @@ https://blog.cook369.xyz/2025/03/20/asdf-usage/
 https://blog.cook369.xyz/2025/03/19/nodejs-install/
 https://blog.cook369.xyz/2025/03/13/harbor/
 https://blog.cook369.xyz/2025/03/14/code-server-deploy/
+https://blog.cook369.xyz/about/index.html
 https://blog.cook369.xyz/categories/index.html
 https://blog.cook369.xyz/tags/index.html
-https://blog.cook369.xyz/about/index.html
 https://blog.cook369.xyz/
 https://blog.cook369.xyz/tags/ansible/
 https://blog.cook369.xyz/tags/asdf/
@@ -35,6 +36,8 @@ https://blog.cook369.xyz/tags/nvm/
 https://blog.cook369.xyz/tags/rpmdb/
 https://blog.cook369.xyz/tags/yum/
 https://blog.cook369.xyz/tags/tmux/
+https://blog.cook369.xyz/tags/virsh/
+https://blog.cook369.xyz/tags/kvm/
 https://blog.cook369.xyz/tags/WoL/
 https://blog.cook369.xyz/tags/wsl/
 https://blog.cook369.xyz/tags/zsh/
