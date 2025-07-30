@@ -12,10 +12,18 @@ tags:
 
 ```shell
 cat << EOF > buildkitd.toml
+
+debug = true
+insecure-entitlements = [ "network.host", "security.insecure" ]
+[dns]
+  nameservers=["xxxxxx","114.114.114.114"]
+[worker.oci]
+  enabled = true
+[registry."registry.xxx.com"]
+  ca=["./registry.xxx.com.cert"]
 [registry."registry.xxx.com:5000"]
-http = false
-insecure = false
-ca=["/etc/docker/certs.d/registry.xxx.com/ca.cert"]
+  http = true
+  insecure = false
 EOF
 ```
 
@@ -24,6 +32,14 @@ EOF
 ```shell
 docker buildx create --name builder --use --config buildkitd.toml --driver-opt image=docker-0.unsee.tech/moby/buildkit:v0.22.0
 docker buildx inspect --bootstrap
+```
+
+```shell
+# 配置远程build环境
+docker buildx rm test-builder
+docker buildx create --name test-builder --driver docker-container --platform linux/amd64 ssh://root@xxxxx --config ./buildkitd.toml
+docker buildx create --name test-builder --driver docker-container --platform linux/arm64 --append ssh://root@xxxx --config ./buildkitd.toml
+docker buildx inspect test-builder --bootstrap
 ```
 
 3. 将证书文件加入系统信任(解决"x509: certificate signed by unknown authority")
@@ -91,6 +107,12 @@ docker buildx build \
     --cache-to type=registry,ref=xxxx.com:5000/cache:latest \
     --cache-from type=registry,ref=xxxx.com:5000/cache:latest \
     -f Dockerfile .
+```
+
+7. 使用认证
+```shell
+docker login xxxx
+docker buildx build xxx
 ```
 
 # 参考
