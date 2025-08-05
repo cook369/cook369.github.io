@@ -19,14 +19,17 @@
   <meta name="author" content="likp">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="delegate_to是ansible的委派主机，使用委派主机需要注意上下问变量不会切换12345678910111213[hosts]node1 ansible_host&#x3D;xxxxx work_dir&#x3D;root_dir_1node2 ansible_host&#x3D;xxxx work_dir&#x3D;root_dir_2[work1]node1[work2]node2[hosts:vars]ansible_s">
+<meta property="og:type" content="article">
 <meta property="og:title" content="ansible-delegate_to">
 <meta property="og:url" content="https://blog.cook369.xyz/2025/08/05/ansible-delegate-to/index.html">
 <meta property="og:site_name" content="Luoye&#39;s Blog">
+<meta property="og:description" content="delegate_to是ansible的委派主机，使用委派主机需要注意上下问变量不会切换12345678910111213[hosts]node1 ansible_host&#x3D;xxxxx work_dir&#x3D;root_dir_1node2 ansible_host&#x3D;xxxx work_dir&#x3D;root_dir_2[work1]node1[work2]node2[hosts:vars]ansible_s">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-05T05:53:53.000Z">
-<meta property="article:modified_time" content="2025-08-05T06:20:29.000Z">
+<meta property="article:modified_time" content="2025-08-05T06:20:58.000Z">
 <meta property="article:author" content="likp">
+<meta property="article:tag" content="ansible">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -258,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          185 字
         
       </span>
     
@@ -269,7 +272,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -327,7 +330,14 @@
             
               <div class="markdown-body">
                 
-                
+                <h3 id="delegate-to是ansible的委派主机，使用委派主机需要注意上下问变量不会切换"><a href="#delegate-to是ansible的委派主机，使用委派主机需要注意上下问变量不会切换" class="headerlink" title="delegate_to是ansible的委派主机，使用委派主机需要注意上下问变量不会切换"></a>delegate_to是ansible的委派主机，使用委派主机需要注意上下问变量不会切换</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[hosts]</span><br>node1 <span class="hljs-attr">ansible_host</span>=xxxxx work_dir=root_dir_1<br>node2 <span class="hljs-attr">ansible_host</span>=xxxx work_dir=root_dir_2<br><br><span class="hljs-section">[work1]</span><br>node1<br><br><span class="hljs-section">[work2]</span><br>node2<br><br><span class="hljs-section">[hosts:vars]</span><br><span class="hljs-attr">ansible_ssh_user</span>=root <br><span class="hljs-attr">ansible_ssh_pass</span>=xxxxx<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">hosts:</span> <span class="hljs-string">node1</span><br>  <span class="hljs-attr">gather_facts:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">tasks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">show</span> <span class="hljs-string">context</span><br>      <span class="hljs-attr">debug:</span><br>        <span class="hljs-attr">msg:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;ansible_delegated_vars:  <span class="hljs-template-variable">&#123;&#123; ansible_delegated_vars.keys() | list &#125;&#125;</span>&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;ansible_play_hosts:  <span class="hljs-template-variable">&#123;&#123; ansible_play_hosts &#125;&#125;</span>&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;inventory_hostname=<span class="hljs-template-variable">&#123;&#123; inventory_hostname &#125;&#125;</span>&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;work_dir=<span class="hljs-template-variable">&#123;&#123; work_dir &#125;&#125;</span>&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;origin work_dir=<span class="hljs-template-variable">&#123;&#123; hostvars[inventory_hostname].work_dir &#125;&#125;</span>&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;delegate work_dir = <span class="hljs-template-variable">&#123;&#123; hostvars[ansible_delegated_vars | first].work_dir &#125;&#125;</span>&quot;</span><br>      <span class="hljs-attr">delegate_to:</span> <span class="hljs-string">node2</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell">PLAY [node1] ******************************************************************************************************************************************************************************************<br><br>TASK [show context] ***********************************************************************************************************************************************************************************<br>ok: [node1 -&gt; node2(172.17.139.121)] =&gt; &#123;<br>    &quot;msg&quot;: [<br>        &quot;ansible_delegated_vars:  [&#x27;node2&#x27;]&quot;,<br>        &quot;ansible_play_hosts:  [&#x27;node1&#x27;]&quot;,<br>        &quot;work_dir=root_dir_1&quot;,<br>        &quot;inventory_hostname=node1&quot;,<br>        &quot;origin work_dir=root_dir_1&quot;,<br>        &quot;delegate work_dir = root_dir_2&quot;<br>    ]<br>&#125;<br><br>PLAY RECAP ********************************************************************************************************************************************************************************************<br>node1                      : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  <br></code></pre></td></tr></table></figure>
+
+<p>需要使用委派主机上下文，可以使用<code>hostvars[ansible_delegated_vars | first]</code>或单独设置vars和set_fact</p>
+
                 
               </div>
             
@@ -335,6 +345,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/ansible/" class="print-no-link">#ansible</a>
+      
+    </div>
   
 </div>
 
