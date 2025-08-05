@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.cook369.xyz/2025/08/05/ansible-delegate-to/</loc>
+    
+    <lastmod>2025-08-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.cook369.xyz/2025/05/24/buildx-in-config/</loc>
     
     <lastmod>2025-07-30</lastmod>
@@ -193,7 +202,7 @@
 
   <url>
     <loc>https://blog.cook369.xyz/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,154 +210,154 @@
   
   <url>
     <loc>https://blog.cook369.xyz/tags/ansible/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/asdf/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/authelia/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/docker/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/buildx/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/code-server/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/git/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/proxy/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/harbor/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/secommp/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/nexus3/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/nmcli/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/nodejs/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/nvm/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/rpmdb/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/yum/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/tmux/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/virsh/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/kvm/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/WoL/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/wsl/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/tags/zsh/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -357,28 +366,28 @@
   
   <url>
     <loc>https://blog.cook369.xyz/categories/docker/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/categories/nodejs/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/categories/yum/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.cook369.xyz/categories/nvm/</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2025-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

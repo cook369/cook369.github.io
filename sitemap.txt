@@ -1,3 +1,4 @@
+https://blog.cook369.xyz/2025/08/05/ansible-delegate-to/
 https://blog.cook369.xyz/2025/05/24/buildx-in-config/
 https://blog.cook369.xyz/2025/07/30/harbor-proxy/
 https://blog.cook369.xyz/2025/06/19/virsh-usage/
